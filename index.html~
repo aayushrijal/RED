@@ -24,7 +24,7 @@
 	<section>
 		<header>
 		<img class='headerIcon' src='icons/redlogo.png' />
-		<p id="titlename">Representation & Evaluation of Data</p>
+		<p id="titlename"><img src='icons/arrow.svg' class='arrowlist' />Representation & Evaluation of Data</p>
 		</header>
 	<div id='internalField'>
                 <div id='click'>

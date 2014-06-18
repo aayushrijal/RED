@@ -10,7 +10,7 @@
 
 }
 body{
-	background-color: #5f545a;
+	background-color: #a00;
 }
 #sideBar{
 	background-color: #e85657;
@@ -21,7 +21,7 @@ body{
 /*	display: none;*/
 }
 .sidebarHeader{
-	font-family: 'aaarghnormal';
+	font-family: aaarghnormal;
 	color: #bb4445;
 	font-weight: 300;
 	padding: 0.9em 0 0.7em 1em;
@@ -32,7 +32,7 @@ body{
 	float: right;
 	color: #fff;
 	font-family: sans;
-	padding-right: 5px;
+	padding: 10px 10px 0 0;
 	cursor: pointer;
 	cursor: hand;
 }
@@ -42,19 +42,76 @@ body{
 .icon{
 	font-family: arial;
 	color: #fff;
-	padding: 1em 0 1em 3em;
+	padding: 0.5em 0 0.5em 2em;
 	font-size: 17px;
+	vertical-align: middle;
+}
+.iconimg{
+	height: 30px;
+	width: 30px;
+	display: inline;
+	margin-right: 20px;
 }
 .icon:hover{
 	background-color: #bb4445;
 	cursor: pointer;
 	transition: all 0.5s;
 }
-section{
-	margin: -8px -8px -8px -6px;
-	background-color: #efefef;
-}
 .headerIcon{
-	position: absolute;
-	margin: -10px 0 0 0;
+	height: 120px;
+	width: auto;
+	display: inline-block;
+	float: left;
+	margin-top: -1px;
+	cursor: pointer;
+	cursor: hand;
+}
+#titlename{
+	font: small-caps 22px arial;
+	display: block;
+	padding-top: 40px;
+	margin-top: -8px;
+	color: #aaa;
+	}
+section{
+	margin: 10px -8px 0 -8px;
+	background-color: #f0faf1;
+	min-height: 700px;
+}
+#internalField{
+	border: 2px solid #1ecd97;
+	width: 1000px;
+	margin: 50px auto;
+	padding: 30px;
+}
+#click{
+	width: 320px;
+	margin: 0 auto;
+}
+#table{
+	width: 500px;
+	margin: 50px auto;
+}
+.button{
+	border: 2px solid #1ecd97;
+	border-radius: 30px;
+	padding: 10px 30px;
+	font-size: 15px;
+	color: #1ecd97;
+	background-color: #f0faf1;
+	margin: 30px;
+	cursor: pointer;
+	cursor: hand;
+}
+.button:hover{
+	background-color: #1ecd97;
+	color: #fff;
+	transition: all 0.2s;
+}
+#autosave{
+	font-family: arial;
+	color: #344;
+	font-size: 15px;
+	float: right;
+	padding-right: 40px;
 }

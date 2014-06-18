@@ -75,13 +75,13 @@
   overflow: hidden;
   outline-width: 0;
   white-space: pre-line;
-  /* preserve new line character in cell */
+  /* preserve new line character in cell      ff4c42*/
 }
 
 .handsontable td.htInvalid {
   -webkit-transition: background 0.75s ease;
   transition: background 0.75s ease;
-  background-color: #ff4c42;
+  background-color: #a00;
 }
 
 .handsontable th:last-child {
