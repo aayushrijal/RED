@@ -18,7 +18,7 @@ body{
 	width: 300px;
 	transform: translateY(-300%);
 	margin: -10px 0 0 -7px;
-/*	display: none;*/
+display: none;
 }
 .sidebarHeader{
 	font-family: aaarghnormal;
@@ -57,4 +57,5 @@ section{
 .headerIcon{
 	position: absolute;
 	margin: -10px 0 0 0;
+	display:none;
 }
