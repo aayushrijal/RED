@@ -20,7 +20,7 @@
     font-style: normal;
 }
 body{
-	background-color: #a00;
+	background-color: #830404;
 }
 #sideBar{
 	background-color: #e85657;
@@ -76,7 +76,7 @@ body{
 #titlename{
 	font: small-caps 22px Bellotalight;
 	display: block;
-	padding-top: 40px;
+	padding-top: 35px;
 	margin-top: -8px;
 	color: #aaa;
 	}
@@ -87,32 +87,31 @@ section{
 }
 #internalField{
 	border: 2px solid #1ecd97;
-	width: 1000px;
+	width: 997px;
 	margin: 50px auto;
-	padding: 30px;
 }
 #click{
-	width: 350px;
-	margin: 0 auto;
+	background-color: #1ecd97;
+	padding-top: 2px;
 }
 #table{
 	width: 500px;
 	margin: 50px auto;
 }
 .button{
-	border: 2px solid #1ecd97;
-	border-radius: 30px;
-	padding: 10px 30px;
+	padding: 4px 8px;
+	font-family: sans;
 	font-size: 15px;
-	color: #1ecd97;
-	background-color: #f0faf1;
-	margin: 30px;
+	background-color: #1ecd97;
+	color: #f0faf1;
+	border: 0 solid #000;
+	display: inline;
 	cursor: pointer;
 	cursor: hand;
 }
 .button:hover{
-	background-color: #1ecd97;
-	color: #fff;
+	background-color: #f0faf1;
+	color: #1ecd97;
 	transition: all 0.2s;
 }
 #autosave{
