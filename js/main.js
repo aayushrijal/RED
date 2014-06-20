@@ -10,7 +10,7 @@
                 var autosaveNotification;
                 $container.handsontable({
                   startRows: 10,
-                  startCols: 8,
+                  startCols: 4,		
                   rowHeaders: false,
                   colHeaders: false,
                   minSpareRows: 1,
@@ -91,3 +91,10 @@
                     $console.text('Changes will not be autosaved');
                   }
                 });
+$(".headerIcon").click(function(){
+$('#sideBar').toggle();
+});
+$(".crossicon").click(function(){
+$('#sideBar').hide();
+});
+

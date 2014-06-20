@@ -26,9 +26,8 @@ body{
 	background-color: #e85657;
 	min-height: 900px;
 	width: 300px;
-	transform: translateY(-300%);
 	margin: -10px 0 0 -7px;
-	display: none;
+	display:none;
 }
 .sidebarHeader{
 	font-family: Aaarghnormal;
@@ -93,7 +92,7 @@ section{
 	padding: 30px;
 }
 #click{
-	width: 320px;
+	width: 350px;
 	margin: 0 auto;
 }
 #table{
