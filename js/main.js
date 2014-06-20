@@ -26,7 +26,9 @@
                     }
                     if ($parent.find('input[name=autosave]').is(':checked')) {
                       clearTimeout(autosaveNotification);
-                      $.ajax({
+			var arr={data:handsontable.getData()};
+                 	plotted(arr);     
+		$.ajax({
                         url: "json/save.json",
                         dataType: "json",
                         type: "POST",
@@ -97,4 +99,5 @@ $('#sideBar').toggle();
 $(".crossicon").click(function(){
 $('#sideBar').hide();
 });
+$('#container').hide();
 

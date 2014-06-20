@@ -1,4 +1,5 @@
 function plotted(dat){
+console.log(dat);
 var a = new Array();
 for(i=1, l=dat.data.length; i<l-1; i++ ){
 	var 	obj = {},
@@ -7,12 +8,16 @@ for(i=1, l=dat.data.length; i<l-1; i++ ){
 	
 	obj["name"] = temp[0];
 	obj["data"] = temp.slice(1, l);
+	for(j=0;j<obj.data.length;j++){
+	obj.data[j] = Number(obj.data[j]);
+	}
 	a.push(obj);
-	console.log("dat is",JSON.stringify(dat), temp);
+	console.log("dat is",JSON.stringify(dat),a);
 }
 var datar=dat.data[0];
 datar=datar.slice(1,datar.length);
-console.log(datar);
+console.log(datar,a);
+$('#container').show();
 $('#container').highcharts({
             chart: {
                 type: 'column'
@@ -21,7 +26,7 @@ $('#container').highcharts({
                 text: 'Marks Attained'
             },
             subtitle: {
-                text: 'Source: Aces.com'
+                text: 'RED'
             },
             xAxis: {
                 categories: datar
