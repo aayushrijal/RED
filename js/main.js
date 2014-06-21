@@ -48,7 +48,7 @@
 
                 $parent.find('button[name=load]').click(function () {
                   $.ajax({
-                    url: "json/load.json",
+                    url: "display_table.php",//json/load.json",
                     dataType: 'json',
                     type: 'GET',
                     success: function (res) {
