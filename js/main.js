@@ -57,8 +57,9 @@
 			//var dat=res.data.splice(0,1);
 			//dat=$.merge(dat,res.data);
 			handsontable.loadData(res.data);
-			plotted(res);                    
-			$console.text('Data loaded');
+			plotted(res);
+			console.log(res,"Data loaded");                    
+			//$console.text('Data loaded');
 			
                     }
                   });
@@ -93,11 +94,21 @@
                     $console.text('Changes will not be autosaved');
                   }
                 });
+var headerClickFlag=1;
 $(".headerIcon").click(function(){
-$('#sideBar').toggle();
-});
+	if(headerClickFlag==1){	
+		$("#wholeBody").animate({"width":"80%","left":"305px"});
+		headerClickFlag=0;
+	}else{
+		$("#wholeBody").animate({"width":"100%","left":"0%"});
+		headerClickFlag=1;
+	}
+	$('#sideBar').toggle(420);
+	});
 $(".crossicon").click(function(){
-$('#sideBar').hide();
+	$("#wholeBody").animate({"width":"100%","left":"0%"});
+	headerClickFlag=1;
+	$('#sideBar').hide();
 });
 $('#container').hide();
 
