@@ -64,11 +64,11 @@
 
                 $parent.find('button[name=save]').click(function () {
                   $.ajax({
-                    url: "json/save.json",
+                    url: "uploader.php",
                     data: {"data": handsontable.getData()}, //returns all cells' data
                     dataType: 'json',
                     type: 'POST',
-                    success: function (res) {
+                    /*success: function (res) {
                       if (res.result === 'ok') {
                         $console.text('Data saved');
                       }
@@ -79,7 +79,7 @@
                     error: function () {
                       $console.text('Save error. POST method is not allowed on GitHub Pages. ' +
                         'Run this example on your own server to see the success message.');
-                    }
+                    }*/
                   });
                 });
 
