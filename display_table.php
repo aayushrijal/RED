@@ -83,5 +83,6 @@ function insert_name($name){
 	$a = array("data"=>$array);
 	$json_output = json_encode($a);
 	echo $json_output;
+?>
 
 	

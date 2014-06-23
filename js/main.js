@@ -1,3 +1,4 @@
+var table_name="TABLE1";
 		var greyRenderer = function (instance, td, row, col, prop, value, cellProperties) {
  	 	Handsontable.renderers.TextRenderer.apply(this, arguments);
   		$(td).css({
@@ -11,9 +12,11 @@
                 $container.handsontable({
                   startRows: 10,
                   startCols: 4,		
-                  rowHeaders: false,
-                  colHeaders: false,
+                  rowHeaders: true,
+                  colHeaders: true,
                   minSpareRows: 1,
+		  manualColumnResize:true,
+		  manualColumnMove:true,	
                   contextMenu: true,
 		cells: function (row, col, prop) {
 	                if (row === 0) {
@@ -68,7 +71,7 @@
                 $parent.find('button[name=save]').click(function () {
                   $.ajax({
                     url: "uploader.php",
-                    data: {"data": handsontable.getData()}, //returns all cells' data
+                    data: {"data": handsontable.getData(),"table_name":table_name}, //returns all cells' data
                     dataType: 'json',
                     type: 'POST',
                     /*success: function (res) {
