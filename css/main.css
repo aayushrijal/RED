@@ -90,10 +90,23 @@ section{
 	background-color: #f0faf1;
 	min-height: 700px;
 }
+#newSheet{
+	border: 1px solid #1ecd97;
+	float: right;
+	margin-top: 70px;
+	margin-right: 200px;
+	background-color: #1ecd97;
+	color: #f0faf1;
+	font-family: arial;
+	padding: 10px;
+	cursor: pointer;
+	cursor: hand;
+	}
 #internalField{
 	border: 2px solid #1ecd97;
 	width: 997px;
 	margin: 50px auto;
+	display: none;
 }
 #click{
 	background-color: #1ecd97;
