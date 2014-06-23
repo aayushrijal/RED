@@ -24,12 +24,11 @@ body{
 }
 #sideBar{
 	background-color: #e85657;
-	min-height: 900px;
+	min-height: 700px;
 	width: 300px;
 	margin: -10px 0 0 -7px;
 	display:none;
 	position:absolute;
-	z-index:100;
 }
 .sidebarHeader{
 	font-family: Aaarghnormal;
@@ -45,9 +44,9 @@ body{
 	cursor: pointer;
 	cursor: hand;
 }
-#wholeBody{
-	position:relative;
-}
+/*#wholeBody{
+	position: relative;
+}*/
 #sidehrline{
 	border-top: 1px solid #bb4445;
 }
@@ -89,12 +88,27 @@ section{
 	margin: 10px -8px 0 -8px;
 	background-color: #f0faf1;
 	min-height: 700px;
+	transition: all 0.5s;
 }
-#newSheet{
-	border: 1px solid #1ecd97;
+.section1{
+	margin: -5px -8px 0 -8px;
+	background-color: #f0faf1;
+	min-height: 700px;
+	transform: translateX(22.5%);
+	overflow: hidden;
+	transition: all 0.5s;
+}
+#sideBorder{
+	border-left: 1px solid #ccc;
+	height: auto;
+	margin-top: 30px;
+	padding: 20px;
 	float: right;
-	margin-top: 70px;
-	margin-right: 200px;
+	}
+.newSheet{
+	border: 0px solid #1ecd97;
+	float: right;
+	margin-right: 100px;
 	background-color: #1ecd97;
 	color: #f0faf1;
 	font-family: arial;
@@ -104,8 +118,8 @@ section{
 	}
 #internalField{
 	border: 2px solid #1ecd97;
-	width: 997px;
-	margin: 50px auto;
+	width: 1024px;
+	margin: 50px 0 50px 20px;
 	display: none;
 }
 #click{

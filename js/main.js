@@ -100,18 +100,17 @@ var table_name="TABLE1";
 var headerClickFlag=1;
 $(".headerIcon").click(function(){
 	if(headerClickFlag==1){	
-		$("#wholeBody").animate({"width":"80%","left":"305px"});
 		headerClickFlag=0;
+		$("#wholeBody").addClass("section1");
 	}else{
-		$("#wholeBody").animate({"width":"100%","left":"0%"});
 		headerClickFlag=1;
+		$("#wholeBody").removeClass("section1");
 	}
 	$('#sideBar').toggle(420);
 	});
 $(".crossicon").click(function(){
-	$("#wholeBody").animate({"width":"100%","left":"0%"});
+		$("#wholeBody").removeClass("section1");
 	headerClickFlag=1;
-	$('#sideBar').hide();
 });
 $('#container').hide();
 
