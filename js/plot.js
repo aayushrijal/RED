@@ -1,5 +1,5 @@
 function plotted(dat){
-console.log(dat);
+//console.log(dat);
 var a = new Array();
 for(i=1, l=dat.data.length; i<l-1; i++ ){
 	var 	obj = {},
@@ -12,11 +12,11 @@ for(i=1, l=dat.data.length; i<l-1; i++ ){
 	obj.data[j] = Number(obj.data[j]);
 	}
 	a.push(obj);
-	console.log("dat is",JSON.stringify(dat),a);
+	//console.log("dat is",JSON.stringify(dat),a);
 }
 var datar=dat.data[0];
 datar=datar.slice(1,datar.length);
-console.log(datar,a);
+//console.log(datar,a);
 $('#container').show();
 $('#container').highcharts({
             chart: {
