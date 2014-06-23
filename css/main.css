@@ -94,9 +94,12 @@ section{
 	margin: -5px -8px 0 -8px;
 	background-color: #f0faf1;
 	min-height: 700px;
-	transform: translateX(22.5%);
+	transform:translateX(22.5%);
+	-webkit-transform: translateX(22.5%);
 	overflow: hidden;
+	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
+
 }
 #sideBorder{
 	border-left: 1px solid #ccc;

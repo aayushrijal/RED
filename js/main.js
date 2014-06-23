@@ -97,20 +97,11 @@ var table_name="TABLE1";
                     $console.text('Changes will not be autosaved');
                   }
                 });
-var headerClickFlag=1;
 $(".headerIcon").click(function(){
-	if(headerClickFlag==1){	
-		headerClickFlag=0;
-		$("#wholeBody").addClass("section1");
-	}else{
-		headerClickFlag=1;
-		$("#wholeBody").removeClass("section1");
-	}
-	$('#sideBar').toggle(420);
-	});
+		$("#wholeBody").toggleClass("section1");
+		});
 $(".crossicon").click(function(){
 		$("#wholeBody").removeClass("section1");
-	headerClickFlag=1;
 });
 $('#container').hide();
 
