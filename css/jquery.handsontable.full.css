@@ -54,6 +54,7 @@
 }
 
 .handsontable col {
+	
   width: 50px;
 }
 
@@ -119,7 +120,7 @@
 }
 
 .handsontable th {
-  background-color: #a00;
+  background-color: grey;/*colour of column and row header*/
   color: #222;
   text-align: center;
   font-weight: normal;
