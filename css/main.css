@@ -104,22 +104,25 @@ section{
 	transition: all 0.5s;
 }
 #sideBorder{
-	border-right: 1px solid #ccc;
-	height: auto;
-	padding: 20px 40px 20px 48px;
-	display: inline-block;
+	border-left: 1px solid #ccc;
+  	height: auto;
+  	padding: 20px;
+  	right: 10px;
+  	float: right;
+  	margin-top: -70px;
 	}
 .newSheet{
-	width: 90px;
-	text-align: center;
 	border: 0px solid #1ecd97;
-	background-color: #1ecd97;
-	color: #f0faf1;
-	font-family: arial;
-	padding: 10px;
-	cursor: pointer;
-	cursor: hand;
-	display: inline-block;
+  	float: right;
+  	right: 100px;
+  	width: 90px;
+  	text-align: center;
+  	background-color: #1ecd97;
+  	color: #f0faf1;
+  	font-family: arial;
+  	padding: 10px;
+  	cursor: pointer;
+  	cursor: hand;
 	}
 #internalFirst{
 	padding:20px;
