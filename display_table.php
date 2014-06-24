@@ -3,7 +3,7 @@ include('lib/database.init.php');
 /*if($_POST['table_name']){		//will get the table name from the json file
 	$table_name = $_POST['table_name'];
 */
-	$table_name = "table2"; //table2 is the name send by the user
+	$table_name = "TABLE1"; //table2 is the name send by the user
 	$array = array();
 	$temp_array = array();
 	$array_index = 0; //initial index for the $array
