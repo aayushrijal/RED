@@ -97,21 +97,11 @@ var table_name="TABLE1";
                     $console.text('Changes will not be autosaved');
                   }
                 });
-var headerClickFlag=1;
 $(".headerIcon").click(function(){
-	if(headerClickFlag==1){	
-		$("#wholeBody").animate({"width":"80%","left":"305px"});
-		headerClickFlag=0;
-	}else{
-		$("#wholeBody").animate({"width":"100%","left":"0%"});
-		headerClickFlag=1;
-	}
-	$('#sideBar').toggle(420);
-	});
+		$("#wholeBody").toggleClass("section1");
+		});
 $(".crossicon").click(function(){
-	$("#wholeBody").animate({"width":"100%","left":"0%"});
-	headerClickFlag=1;
-	$('#sideBar').hide();
+		$("#wholeBody").removeClass("section1");
 });
 $('#container').hide();
 
