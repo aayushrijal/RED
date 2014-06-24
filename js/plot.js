@@ -1,22 +1,17 @@
 function plotted(dat){
-//console.log(dat);
-var a = new Array();
-for(i=1, l=dat.data.length; i<l-1; i++ ){
-	var 	obj = {},
+	var dataToPlot = new Array();
+	for(i=1, l=dat.data.length; i<l-1; i++ ){
+		var obj = {},
 		temp = dat["data"][i];
-		console.log(l);
-	
-	obj["name"] = temp[0];
-	obj["data"] = temp.slice(1, l);
-	for(j=0;j<obj.data.length;j++){
-	obj.data[j] = Number(obj.data[j]);
+		obj["name"] = temp[0];
+		obj["data"] = temp.slice(1);
+		for(j=0;j<obj.data.length;j++){
+			obj.data[j] = Number(obj.data[j]);
+			}
+		dataToPlot.push(obj);
 	}
-	a.push(obj);
-	//console.log("dat is",JSON.stringify(dat),a);
-}
-var datar=dat.data[0];
-datar=datar.slice(1,datar.length);
-//console.log(datar,a);
+var dataCategories=dat.data[0];
+datar=datar.slice(1,dataCategories.length);
 $('#container').show();
 $('#container').highcharts({
             chart: {
@@ -29,7 +24,7 @@ $('#container').highcharts({
                 text: 'RED'
             },
             xAxis: {
-                categories: datar
+                categories: dataCategories
             },
             yAxis: {
                 min: 0,
@@ -51,12 +46,12 @@ $('#container').highcharts({
                     borderWidth: 0
                 }
             },
-            series:a
+            series:dataToPlot
         });
 }
 
-	$('#addC').click(function(){
+	/*$('#addC').click(function(){
 		$container.handsontable({startCols:6});
-	});
+	});*/
 
-
+	
