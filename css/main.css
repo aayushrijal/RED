@@ -21,13 +21,16 @@
 }
 body{
 	background-color: #830404;
+	margin: auto 0;
+	width: auto;
+	overflow: hidden;
 }
 #sideBar{
 	background-color: #e85657;
 	min-height: 700px;
 	width: 300px;
 	margin: -10px 0 0 -7px;
-	display:none;
+	transform: translateX(-100.5%);
 	position:absolute;
 }
 .sidebarHeader{
@@ -38,17 +41,14 @@ body{
 	font-size: 2em;
 }
 .crossicon{
-	/*position: absolute;*/
 	float: right;
 	padding: 15px 10px 0 0;
 	cursor: pointer;
 	cursor: hand;
 }
-/*#wholeBody{
-	position: relative;
-}*/
 #sidehrline{
 	border-top: 1px solid #bb4445;
+	margin-left: 20px;
 }
 .icon{
 	font-family: Aaarghnormal;
@@ -85,13 +85,13 @@ body{
 	color: #aaa;
 	}
 section{
-	margin: 10px -8px 0 -8px;
+	margin: 0px -8px 0 -8px;
 	background-color: #f0faf1;
 	min-height: 700px;
 	transition: all 0.5s;
 }
 .section1{
-	margin: -5px -8px 0 -8px;
+	margin: 0px -8px 0 -8px;
 	background-color: #f0faf1;
 	min-height: 700px;
 	transform:translateX(22.5%);
@@ -104,14 +104,15 @@ section{
 #sideBorder{
 	border-left: 1px solid #ccc;
 	height: auto;
-	margin-top: 30px;
 	padding: 20px;
+	right: 10px;
 	float: right;
+	margin-top: -70px;
 	}
 .newSheet{
 	border: 0px solid #1ecd97;
 	float: right;
-	margin-right: 100px;
+	right: 100px;
 	background-color: #1ecd97;
 	color: #f0faf1;
 	font-family: arial;
@@ -119,11 +120,12 @@ section{
 	cursor: pointer;
 	cursor: hand;
 	}
+#internalFirst{
+	padding:20px;
+	}
 #internalField{
 	border: 2px solid #1ecd97;
-	width: 1024px;
-	margin: 50px 0 50px 20px;
-	display: none;
+	margin-top: 30px;
 }
 #click{
 	background-color: #1ecd97;
