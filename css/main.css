@@ -20,7 +20,7 @@
     font-style: normal;
 }
 body{
-	background-color: #830404;
+	background-color: #880909;
 	margin: auto 0;
 	width: auto;
 	overflow: hidden;
@@ -30,9 +30,11 @@ body{
 	min-height: 700px;
 	width: 300px;
 	margin: -10px 0 0 -7px;
-	transform: translateX(-100.5%);
+	transform: translateX(0);
 	position:absolute;
+	z-index: 0;
 }
+
 .sidebarHeader{
 	font-family: Aaarghnormal;
 	color: #bb4445;
@@ -89,17 +91,17 @@ section{
 	background-color: #f0faf1;
 	min-height: 700px;
 	transition: all 0.5s;
+	position: relative;
 }
 .section1{
 	margin: 0px -8px 0 -8px;
 	background-color: #f0faf1;
 	min-height: 700px;
-	transform:translateX(22.5%);
-	-webkit-transform: translateX(22.5%);
+	transform:translateX(22%);
+	-webkit-transform: translateX(22%);
 	overflow: hidden;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
-
 }
 #sideBorder{
 	border-left: 1px solid #ccc;

@@ -1,8 +1,10 @@
 $(".headerIcon").click(function(){
 		$("#wholeBody").toggleClass("section1");
+		$("#sideBar").toggleClass("sideBar1");	
 		});
 $(".crossicon").click(function(){
 		$("#wholeBody").removeClass("section1");
-		});
+		$("#sideBar").toggleClass("sideBar1");
+});
 $('#container').hide();
 
