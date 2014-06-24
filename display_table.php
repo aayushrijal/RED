@@ -23,8 +23,6 @@ include('lib/database.init.php');
 			die("ERROR: ".mysql_error());
 	
 	while($row = mysql_fetch_assoc($retval,MYSQL_ASSOC)){
-
-
 		if( $row['name'] == $temp_array[0]){
 			$temp_array_index++;
 			$temp_array[$temp_array_index] = $row['marks'];
@@ -44,42 +42,37 @@ include('lib/database.init.php');
 		}	
 	}
 			array_push($array,$temp_array);
+			
+/*for the names of the field
 
-
-
-/*
-//make this function inline function
-
-
-function check($name){		// $name = name obtained from sql query static $name_set = 0; //to see if name has been set
-	global $array;
-	global $array_index;
-	global $temp_array;
-	global $temp_array_index;
-	if( '$array[$array_index][0]' == $name ){   //same as name
-			;
-	}else{						//not same name
-		insert_name($name);
-		return 1;
+*/
+	$fields = array();		//for the extraction of the fields (doesn't include the first column field,assuming it as name always)
+	array_push($fields,"name");	//this is our system's standard 
+	$retval = mysql_query($sql,$conn);
+	if(!$retval)
+		die("ERROR :".mysql_error());
+	while($row = mysql_fetch_assoc($retval,MYSQL_ASSOC)){
+		if( in_array($row['subject'],$fields)){		//if exists loop terminates
+			break;
+		}else{
+			array_push($fields,$row['subject']);
+		}
 	}
 	
-}
+/* now $array is reversed and $fields is pushed ie. the fields are at the last
+	again $array is reversed so that $fields are in first
 
-/*Creating temporary ie new multi_indexed array
+*/
 
 
 
-function insert_name($name){
-	global $temp_array;
-	global $array;
-	global $name_inserted;
-	$temp_array_index = 0;
-	array_push($temp_array,$name);
-	$name_inserted = 1; //to set that name has been inserted
-}
 
-*/	
-	array_shift($array);
+	
+	array_shift($array);		//removes the null array of the first
+	array_unshift($array,$fields);
+
+
+
 	$a = array("data"=>$array);
 	$json_output = json_encode($a);
 	echo $json_output;

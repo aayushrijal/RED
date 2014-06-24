@@ -11,7 +11,7 @@ function plotted(dat){
 		dataToPlot.push(obj);
 	}
 var dataCategories=dat.data[0];
-datar=datar.slice(1,dataCategories.length);
+dataCategories=dataCategories.slice(1,dataCategories.length);
 $('#container').show();
 $('#container').highcharts({
             chart: {
