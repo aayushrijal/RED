@@ -69,6 +69,7 @@ include('lib/database.init.php');
 
 	
 	array_shift($array);		//removes the null array of the first
+	if( !empty($array))		//if there is no data in $array don't even put the column names
 	array_unshift($array,$fields);
 
 
