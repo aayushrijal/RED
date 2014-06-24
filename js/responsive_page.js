@@ -1,4 +1,3 @@
 $(".newSheet").click(function(){
-	$("#internalField").show();	
-
+	$("#internalField").load("internalField.html");	
 });
