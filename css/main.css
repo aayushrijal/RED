@@ -124,6 +124,29 @@ section{
   	cursor: pointer;
   	cursor: hand;
 	}
+#firstPage{
+	border: 0px solid #fff;
+	background-color: #fff;
+	margin: 20px auto;
+	width: 70%;
+	min-height: 300px;
+	box-shadow: 1px 1px 3px 1px #ccc;
+	border-radius: 3px;
+	padding: 20px;
+	}
+.history{
+	font-family: arial;
+	color: #ccc;
+	}
+#historyContent{
+	padding: 2px;
+	}
+.sheetlist{
+	display: inline;
+	width: 120px;
+	padding: 10px;
+	margin: 10px auto;
+	}
 #internalFirst{
 	padding:20px;
 	}
