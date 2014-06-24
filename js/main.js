@@ -1,3 +1,4 @@
+var table_name="TABLE1";
 $(".headerIcon").click(function(){
 		$("#wholeBody").toggleClass("section1");
 		});

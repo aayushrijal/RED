@@ -1,4 +1,4 @@
-var table_name="TABLE1";
+		$("#tableName").html(table_name);
 		var greyRenderer = function (instance, td, row, col, prop, value, cellProperties) {
  	 	Handsontable.renderers.TextRenderer.apply(this, arguments);
   		$(td).css({
