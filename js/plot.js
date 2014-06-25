@@ -50,8 +50,3 @@ $('#container').highcharts({
         });
 }
 
-	/*$('#addC').click(function(){
-		$container.handsontable({startCols:6});
-	});*/
-
-	
