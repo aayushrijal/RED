@@ -30,6 +30,15 @@ if( $_POST['data']){
 						$sql = "INSERT INTO project1".
 							"(name,subject,marks,table_name) ".
 							"values('{$y[0]}','{$f}',{$y[$i]},'{$table_name}')";
+//if the value send in marks is NULL ie. the user has not send any data
+						if( empty($y[$i]) || ($y[$i]=="")){
+						$y[$i] = 0;
+						$sql = "INSERT INTO project1".
+							"(name,subject,marks,table_name) ".
+							"values('{$y[0]}','{$f}',{$y[$i]},'{$table_name}')";
+						}
+
+
 						if(isset($y[0]) && !empty($y[0])){
 							$retval =  mysql_query($sql,$conn);
 							if(!$retval)
