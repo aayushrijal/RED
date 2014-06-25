@@ -15,22 +15,24 @@
 	padding-top: 20px;
 	}
 .namebox{
-	border: 2px solid #ccc;
+	border: 2px solid #ebd3bd;
 	padding: 10px;
 	text-align: center;
 	font-style: italic;
-	color: #344;
+	color: #bb4445;
 	width: 220px;
 	margin: 0 27px;
 	font-family: Aaarghnormal;
+	font-weight: bold;
 	}
 .create{
 	border: 0 solid #ccc;
 	background-color: #bb4445;
-	width: 90px;
+	width: 244px;
 	padding: 10px 13px;
 	color: #fff;
 	font-family: Aaarghnormal;
 	cursor: hand;
 	cursor: pointer;
+	margin: 0px 27px;
 	}
