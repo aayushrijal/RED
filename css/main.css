@@ -98,8 +98,8 @@ section{
 	margin: 0px -8px 0 -8px;
 	background-color: #f0faf1;
 	min-height: 700px;
-	transform:translateX(22%);
-	-webkit-transform: translateX(22%);
+	transform:translateX(22.2%);
+	-webkit-transform: translateX(22.2%);
 	overflow: hidden;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
