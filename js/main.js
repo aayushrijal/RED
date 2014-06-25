@@ -21,7 +21,7 @@ $.ajax({
 				$("#firstPage").hide();
 				alert("RED \n \n \tYour table "+table_name+" has been loaded!");
 				$.ajax({	url: "display_table.php",
-						data:{'data':table_name},	
+						data:{'table_name':table_name},	
                     		 	 	dataType: 'json',
                     				type: 'POST',
                     				success: function (res) {
