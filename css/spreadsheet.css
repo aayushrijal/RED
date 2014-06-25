@@ -1,0 +1,36 @@
+#tablename{
+	width: 300px;
+	min-height: 100px;
+	margin: 0 auto;
+	vertical-align: middle;
+	border: 0px solid #fff;
+	background-color: #fff;
+	box-shadow: 1px 2px 3px 2px #ccc;
+	}
+.newsheetheader{
+	font-family: Aaarghnormal;
+	color: #bb4445;
+	font-size: 25px;
+	text-align: center;
+	padding-top: 20px;
+	}
+.namebox{
+	border: 2px solid #ccc;
+	padding: 10px;
+	text-align: center;
+	font-style: italic;
+	color: #344;
+	width: 220px;
+	margin: 0 27px;
+	font-family: Aaarghnormal;
+	}
+.create{
+	border: 0 solid #ccc;
+	background-color: #bb4445;
+	width: 90px;
+	padding: 10px 13px;
+	color: #fff;
+	font-family: Aaarghnormal;
+	cursor: hand;
+	cursor: pointer;
+	}
