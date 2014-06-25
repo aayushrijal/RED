@@ -1,7 +1,7 @@
 <?php
-//$table_name = $_POST['table_name'];
+$table_name = $_POST['table_name'];
 // 	echo $table_name; //test line to display table name from the json file.
-$table_name = "TABLE1";
+//$table_name = "TABLE1";
 
 if( $_POST['data']){
 	$x = $_POST['data'];
