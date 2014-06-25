@@ -63,8 +63,9 @@ body{
 .iconimg{
 	height: 30px;
 	width: 30px;
-	display: inline;
+	display: inline-block;
 	margin-right: 20px;
+	vertical-align: middle;
 }
 .icon:hover{
 	background-color: #bb4445;
