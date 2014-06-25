@@ -23,7 +23,8 @@ body{
 	background-color: #880909;
 	margin: auto 0;
 	width: auto;
-	overflow: hidden;
+	overflow-x: hidden;
+	--webkit-overflow-x: hidden;
 }
 #sideBar{
 	background-color: #e85657;
@@ -80,7 +81,7 @@ body{
 	cursor: hand;
 }
 #titlename{
-	font: small-caps 22px Bellotalight;
+	font: small-caps 22px Aaarghnormal;
 	display: block;
 	padding-top: 35px;
 	margin-top: -8px;
