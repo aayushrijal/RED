@@ -13,7 +13,7 @@ $.ajax({
                     type: 'GET',
                     success: function (daTable) {
 			for(i=0;i<daTable.table_list.length;i++){
-				$("#historyContent").append('<button class="sheetlist" id="'+daTable.table_list[i]+'"><img src="icons/spreadsheet.svg" width="100" height="100"><label>'+daTable.table_list[i]+'</label></button>');
+				$("#historyContent").append('<button class="sheetlist" id="'+daTable.table_list[i]+'"><img src="icons/sheets.png" width="100" height="100"><label>'+daTable.table_list[i]+'</label></button>');
 				}			
 			$(".sheetlist").click(function(e){
 				table_name=e.target.id;

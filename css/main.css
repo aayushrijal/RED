@@ -31,7 +31,8 @@ body{
 	min-height: 700px;
 	width: 300px;
 	margin: -10px 0 0 -7px;
-	transform: translateX(0);
+	transform: translateX(-4%);
+	-webkit-transform: translateX(-4%);
 	position:absolute;
 	z-index: 0;
 }
@@ -40,7 +41,7 @@ body{
 	font-family: Aaarghnormal;
 	color: #bb4445;
 	font-weight: 300;
-	padding: 0.9em 0 0.7em 1em;
+	padding: 0.9em 0 0.7em 2em;
 	font-size: 2em;
 }
 .crossicon{
@@ -56,7 +57,7 @@ body{
 .icon{
 	font-family: Aaarghnormal;
 	color: #fff;
-	padding: 0.5em 0 0.5em 2em;
+	padding: 0.5em 0 0.5em 3.5em;
 	font-size: 17px;
 	vertical-align: middle;
 }
@@ -99,8 +100,8 @@ section{
 	margin: 0px -8px 0 -8px;
 	background-color: #f0faf1;
 	min-height: 700px;
-	transform:translateX(22.2%);
-	-webkit-transform: translateX(22.2%);
+	transform:translateX(21.3%);
+	-webkit-transform: translateX(21.3%);
 	overflow: hidden;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
@@ -149,7 +150,13 @@ section{
 	display: inline;
 	width: 120px;
 	padding: 10px;
-	margin: 10px auto;
+	margin: 10px;
+	border: 0px solid #ccc;
+	background-color: #fff;
+	box-shadow: 1px 2px 3px 1px #ccc;
+	cursor: pointer;
+	cursor: hand;
+	color: #4387fd;
 	}
 #internalFirst{
 	padding:20px;
