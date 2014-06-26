@@ -12,5 +12,7 @@ $("#button1").click(function(){
 $(".icon").click(function(){
 	$("#wholeBody").removeClass("section1");
 	});
-
-
+$("#import").click(function(){
+	$("#firstPage").hide();
+	$("#internalFirst").load("import.html");	
+});

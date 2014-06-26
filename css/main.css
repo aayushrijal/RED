@@ -108,18 +108,17 @@ section{
 #sideBorder{
 	border-left: 1px solid #ccc;
   	height: auto;
-  	padding: 20px;
-  	right: 10px;
+  	padding: 20px 0 20px 50px;
+  	margin-right: 5%;
   	float: right;
-  	margin-top: -70px;
+  	margin-top: -100px;
 	}
 .newSheet{
-	border: 0px solid #1ecd97;
+  	background-color: #e85657;
+	border: 0px solid #e85657;
   	float: right;
-  	right: 100px;
   	width: 90px;
   	text-align: center;
-  	background-color: #1ecd97;
   	color: #f0faf1;
   	font-family: arial;
   	padding: 10px;
@@ -130,15 +129,18 @@ section{
 	border: 0px solid #fff;
 	background-color: #fff;
 	margin: 20px auto;
-	width: 70%;
+	width: 58%;
 	min-height: 300px;
 	box-shadow: 1px 1px 3px 1px #ccc;
 	border-radius: 3px;
 	padding: 20px;
 	}
 .history{
-	font-family: arial;
+	font-family: Aaarghnormal;
 	color: #ccc;
+	}
+#historyhr{
+	border: 1px solid #ccc;
 	}
 #historyContent{
 	padding: 2px;
@@ -164,6 +166,16 @@ section{
 	width: 500px;
 	margin: 50px auto;
 }
+.nameoftable{
+	padding: 4px 8px;
+	font-family: sans;
+	font-size: 15px;
+	background-color: #1ecd97;
+	color: #f0faf1;
+	border: 0 solid #000;
+	display: inline;
+	font-weight: bold;
+}
 .button{
 	padding: 4px 8px;
 	font-family: sans;
@@ -187,3 +199,14 @@ section{
 	float: right;
 	padding-right: 40px;
 }
+.bring{
+	border: 0 solid #ccc;
+	background-color: #e85657;
+	width: 244px;
+	padding: 10px 13px;
+	color: #fff;
+	font-family: Aaarghnormal;
+	cursor: hand;
+	cursor: pointer;
+	margin: 30px 15px;
+	}

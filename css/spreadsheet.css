@@ -1,4 +1,4 @@
-#tablename{
+#tablename, #import1{
 	width: 300px;
 	min-height: 100px;
 	margin: 0 auto;
@@ -7,7 +7,7 @@
 	background-color: #fff;
 	box-shadow: 1px 2px 3px 2px #ccc;
 	}
-.newsheetheader{
+.newsheetheader, .importfrom{
 	font-family: Aaarghnormal;
 	color: #bb4445;
 	font-size: 25px;
