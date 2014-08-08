@@ -1,52 +1,83 @@
+var alphatest1 = new Array();
+var alphatest2 = new Array();
+
 function plotted(dat){
+	alphatest1=dat;
 	var dataToPlot = new Array();
+	var splineDataFetch =new Array();
+	var pieData={
+		data:[],
+		type:'pie',
+		name:/*table_name*/"Total Marks Attained",
+		center: [100, 80],
+                size: 100,
+      	      showInLegend: false,
+            dataLabels: {
+                enabled: false
+            }
+		};
 	for(i=1, l=dat.data.length; i<l-1; i++ ){
-		var obj = {},
+		console.log(dat.data,dat.data.length);
+		var obj = {};
+		var pieDataFetch=0;
 		temp = dat["data"][i];
 		obj["name"] = temp[0];
+		if(temp[0]!=undefined)
+		obj["type"] ="column";
 		obj["data"] = temp.slice(1);
 		for(j=0;j<obj.data.length;j++){
 			obj.data[j] = Number(obj.data[j]);
+			if(splineDataFetch[j]!=undefined){
+					pieDataFetch+=obj.data[j];
+					splineDataFetch[j]+=obj.data[j];
+					}else{
+					pieDataFetch=obj.data[j];
+					splineDataFetch[j]=obj.data[j];
+					}
 			}
+			pieData.data.push({	
+						name:temp[0],
+						y:pieDataFetch,
+						/*color:Highcharts.getOptions().colors[i]*/
+						});
+		alphatest2=pieData;
 		dataToPlot.push(obj);
+		console.log(splineDataFetch);
+		splineDataFetch.forEach(function(part,index,theArray){
+			theArray[index]/=(l-2);
+			});
 	}
+	dataToPlot.push(pieData);
+	dataToPlot.push({
+		type:'spline',
+		name:'average',
+		data:splineDataFetch,
+		marker: {
+            	lineWidth: 2,
+            	lineColor: Highcharts.getOptions().colors[3],
+            	fillColor: 'white'
+            	}
+	});
 var dataCategories=dat.data[0];
 dataCategories=dataCategories.slice(1,dataCategories.length);
 $('#container').show();
 $('#container').highcharts({
-            chart: {
-                type: 'column'
-            },
             title: {
-                text: 'Marks Attained'
-            },
-            subtitle: {
-                text: 'RED'
-            },
-            xAxis: {
-                categories: dataCategories
-            },
-            yAxis: {
-                min: 0,
-                title: {
-                    text: 'Marks'
+            text: table_name
+        },
+        xAxis: {
+            categories: dataCategories
+        },
+        labels: {
+            items: [{
+                html: table_name,
+                style: {
+                    left: '50px',
+                    top: '18px',
+                    color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
                 }
-            },
-            tooltip: {
-                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                    '<td style="padding:0"><b>{point.y:.0f}</b></td></tr>',
-                footerFormat: '</table>',
-                shared: true,
-                useHTML: true
-            },
-            plotOptions: {
-                column: {
-                    pointPadding: 0.2,
-                    borderWidth: 0
-                }
-            },
-            series:dataToPlot
-        });
+            }]
+        },
+        series:dataToPlot
+	 });
 }
-

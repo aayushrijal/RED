@@ -77,7 +77,9 @@ include('lib/database.init.php');
 
 
 	$a = array("data"=>$array);
+	header('Content-Type:application/json');	
 	$json_output = json_encode($a);
+		
 	echo $json_output;
 ?>
 

@@ -1,4 +1,5 @@
 var table_name="TABLE1";
+var bat;
 $(".headerIcon").click(function(){
 		$("#wholeBody").toggleClass("section1");
 		});
@@ -24,11 +25,12 @@ $.ajax({
 						data:{'table_name':table_name},	
                     		 	 	dataType: 'json',
                     				type: 'POST',
-                    				success: function (res) {
-							handsontable.loadData(res.data);
-							plotted(res);
-							console.log(res,"Data loaded");                  
-                    					}
+						//Content-Type: 'text/plain',
+                    				complete: function (res) {
+							bat=res;
+							handsontable.loadData(res.responseJSON.data);
+							plotted(res.responseJSON);
+							}
                 			  });
                			 });
 				}
