@@ -63,7 +63,7 @@ dataCategories=dataCategories.slice(1,dataCategories.length);
                 }
             },
             credits: {
-                enabled: true
+                enabled: false
             },
             series: dataToPlot
         });

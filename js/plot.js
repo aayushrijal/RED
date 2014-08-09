@@ -1,6 +1,5 @@
 var alphatest1 = new Array();
 var alphatest2 = new Array();
-
 function plotted(dat){
 	alphatest1=dat;
 	var dataToPlot = new Array();

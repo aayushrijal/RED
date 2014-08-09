@@ -8,6 +8,16 @@ $("#newSpreadSheet").click(function(){
 $("#newGraph").click(function(){
 	plotArea();
 });
+$("#newMarkSheet").click(function(){
+	$("#internalFirst").load("internalFirst.html");	
+	$.getScript("js/marksheet.js");
+	$("#firstPage").hide();
+	for(i=0;i<1000;i++);
+	setTimeout(function(){
+		table_name="ReportCard of "+dataObtained.data[1][0];
+		handsontable.loadData(markSheet);
+	},10);
+	});
 $("#button1").click(function(){
 	table_name=$("#text1").val();
 	$("#internalFirst").load("internalFirst.html");
