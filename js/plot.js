@@ -17,7 +17,6 @@ function plotted(dat){
             }
 		};
 	for(i=1, l=dat.data.length; i<l-1; i++ ){
-		console.log(dat.data,dat.data.length);
 		var obj = {};
 		var pieDataFetch=0;
 		temp = dat["data"][i];

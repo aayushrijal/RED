@@ -5,6 +5,9 @@ $("#newSpreadSheet").click(function(){
 	$("#firstPage").hide();
 	$("#internalFirst").load("spreadsheet.html");	
 });
+$("#newGraph").click(function(){
+	plotArea();
+});
 $("#button1").click(function(){
 	table_name=$("#text1").val();
 	$("#internalFirst").load("internalFirst.html");
