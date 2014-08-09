@@ -2,7 +2,8 @@
 		var greyRenderer = function (instance, td, row, col, prop, value, cellProperties) {
  	 	Handsontable.renderers.TextRenderer.apply(this, arguments);
   		$(td).css({
-    		background: '#ccc'
+    		background: '#45A78B',
+		color: 'white'
   			});
 		};	              
 		 var $container = $("#example1");
@@ -11,13 +12,14 @@
                 var autosaveNotification;
                 $container.handsontable({
                   startRows: 10,
-                  startCols: 4,		
-                  rowHeaders: true,
-                  colHeaders: true,
+                  startCols: 6,		
+                  rowHeaders: false,
+                  colHeaders: false,
                   minSpareRows: 1,
 		  manualColumnResize:true,
 		  manualColumnMove:true,	
                   contextMenu: true,
+		  //data:[["Name","Subject 1","Subject 2","Subject 3","Subject 4","Subject 5"],[],[],[],[],[" "]],
 		cells: function (row, col, prop) {
 	                if (row === 0) {
 	                  this.renderer = greyRenderer;

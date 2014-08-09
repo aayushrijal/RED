@@ -14,13 +14,13 @@ $("#newMarkSheet").click(function(){
 	$("#firstPage").hide();
 	for(i=0;i<1000;i++);
 	setTimeout(function(){
-		table_name="ReportCard of "+dataObtained.data[1][0];
 		handsontable.loadData(markSheet);
-	},10);
+	},20);
 	});
 $("#button1").click(function(){
 	table_name=$("#text1").val();
 	$("#internalFirst").load("internalFirst.html");
+	handsontable.loadData([["Name","Subject 1","Subject 2","Subject 3","Subject 4","Subject 5"],[],[],[],[],[" "]]);
 });
 $(".icon").click(function(){
 	$("#wholeBody").removeClass("section1");
