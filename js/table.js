@@ -28,7 +28,7 @@
                       return; //don't save this change
                     }
                     if ($parent.find('input[name=autosave]').is(':checked')) {
-                      clearTimeout(autosaveNotification);
+                      //clearTimeout(autosaveNotification);
 			var arr={data:handsontable.getData()};
                  	plotted(arr);     
 		$.ajax({
@@ -62,9 +62,7 @@
 			handsontable.loadData(res.data);
 			plotted(res);
 			console.log(res,"Data loaded");                    
-			//$console.text('Data loaded');
-			
-                    }
+			 }
                   });
                 });
 

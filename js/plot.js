@@ -27,14 +27,17 @@ function plotted(dat){
 		obj["data"] = temp.slice(1);
 		for(j=0;j<obj.data.length;j++){
 			obj.data[j] = Number(obj.data[j]);
-			if(splineDataFetch[j]!=undefined){
-					pieDataFetch+=obj.data[j];
+			if(i>1){
 					splineDataFetch[j]+=obj.data[j];
-					}else{
-					pieDataFetch=obj.data[j];
+				}else{
 					splineDataFetch[j]=obj.data[j];
 					}
-			}
+			if(pieDataFetch!=0){
+					pieDataFetch+=obj.data[j];
+					}else{
+					pieDataFetch=obj.data[j];
+					}
+				}
 			pieData.data.push({	
 						name:temp[0],
 						y:pieDataFetch,
@@ -43,10 +46,12 @@ function plotted(dat){
 		alphatest2=pieData;
 		dataToPlot.push(obj);
 		console.log(splineDataFetch);
-		splineDataFetch.forEach(function(part,index,theArray){
-			theArray[index]/=(l-2);
-			});
 	}
+	splineDataFetch.forEach(function(part,index,theArray){
+			console.log(theArray[index],"has items ",(l-2));
+			theArray[index]/=(l-2);
+			console.log(theArray[index]);
+			});		
 	dataToPlot.push(pieData);
 	dataToPlot.push({
 		type:'spline',
