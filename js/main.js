@@ -20,7 +20,8 @@ $.ajax({
 				table_name=e.target.id;
 				$("#internalFirst").load("internalFirst.html");
 				$("#firstPage").hide();
-				alert("RED \n \n \tYour table "+table_name+" has been loaded!");
+				//alert("RED \n \n \tYour table "+table_name+" has been loaded!");
+				setTimeout(function(){				
 				$.ajax({	url: "display_table.php",
 						data:{'table_name':table_name},	
                     		 	 	dataType: 'json',
@@ -32,6 +33,7 @@ $.ajax({
 							plotted(res.responseJSON);
 							}
                 			  });
+					},9);
                			 });
 				}
 		   
