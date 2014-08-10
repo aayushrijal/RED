@@ -5,7 +5,7 @@
 
 //assumed data
 $name = "sita"; //this data got from the selection by user
-$selected_table = "table1"; //this data is from the selected table by the user
+$selected_table = "table2"; //this data is from the selected table by the user
 
 
 //actual codes
@@ -22,7 +22,7 @@ $selected_table = "table1"; //this data is from the selected table by the user
         while( $row = mysql_fetch_array($retval,MYSQL_ASSOC)){
                 array_push($name_list,$row['name']);
         }
-        $name_list = array("table_list"=>$name_list);
+        $name_list = array("name_list"=>$name_list);
         $json_output = json_encode($name_list);
         echo $json_output;
 
