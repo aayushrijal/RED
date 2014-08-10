@@ -1,4 +1,4 @@
-function plotArea(){
+function plotArea(chartName){
 	dat=handsontable.getData();
 	var dataToPlot = new Array();
 	for(i=1, l=dat.length; i<l-1; i++ ){
@@ -15,7 +15,7 @@ var dataCategories=dat[0];
 dataCategories=dataCategories.slice(1,dataCategories.length);
 	$('#container').highcharts({
             chart: {
-                type: 'area',
+                type: chartName,
                 spacingBottom: 30
             },
             title: {
@@ -28,7 +28,7 @@ dataCategories=dataCategories.slice(1,dataCategories.length);
                 verticalAlign: 'bottom',
                 y: 15
             },
-            legend: {
+            /*legend: {
                 layout: 'horizontal',
                 align: 'left',
                 verticalAlign: 'top',
@@ -37,7 +37,7 @@ dataCategories=dataCategories.slice(1,dataCategories.length);
                 floating: true,
                 borderWidth: 1,
                 backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
-            },
+            },*/
             xAxis: {
                 categories: dataCategories
             },
@@ -68,3 +68,4 @@ dataCategories=dataCategories.slice(1,dataCategories.length);
             series: dataToPlot
         });
 }
+

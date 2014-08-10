@@ -1,12 +1,21 @@
+var tableData=new Array();
+var $egg;
 $(".newSheet").click(function(){
 		$("#wholeBody").toggleClass("section1");
 		});
 $("#newSpreadSheet").click(function(){
+	$("#container").hide(1000);		
 	$("#firstPage").hide();
 	$("#internalFirst").load("spreadsheet.html");	
 });
 $("#newGraph").click(function(){
-	plotArea();
+	//tableData=handsontable.getData();
+	$("#container").hide();		
+	//$("#firstPage").hide();
+	$egg=$.get("graphselect.html");
+	setTimeout(function(){
+	$("#internalFirst").prepend($egg.responseText);
+	},100);
 });
 $("#newMarkSheet").click(function(){
 	$("#internalFirst").load("internalFirst.html");	
@@ -15,15 +24,27 @@ $("#newMarkSheet").click(function(){
 	for(i=0;i<1000;i++);
 	setTimeout(function(){
 		handsontable.loadData(markSheet);
-	},20);
+	},30);
 	});
 $("#button1").click(function(){
 	table_name=$("#text1").val();
 	$("#internalFirst").load("internalFirst.html");
 	setTimeout(function(){	
 	handsontable.loadData([["Name","Subject 1","Subject 2","Subject 3","Subject 4","Subject 5"],[],[],[],[],[" "]]);
-	},5);
+	},10);
 });
+$("#barButton").click(function(){
+		$("#tablename").remove();
+		var chartName="column";
+		$("#container").show();
+		plotArea(chartName);	
+	});
+$("#areaButton").click(function(){
+		$("#tablename").remove();
+		var chartName="area";
+		$("#container").show();
+		plotArea(chartName);	
+	});
 $(".icon").click(function(){
 	$("#wholeBody").removeClass("section1");
 	});
