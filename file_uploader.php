@@ -28,7 +28,6 @@
 		//		echo $subject_count;
 		//		echo $heading_variables["subject1"];
 				$total_student = count($data); 		//will give the acutal no of student records
-				var_dump($subject_name);
 /* Insertion in the database from the json file
 			
 */
