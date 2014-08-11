@@ -89,16 +89,6 @@ function check_entry($name,$subject){
 
 
 
-
-
-
-
-
-
-
-
-
-
 /*table_name from json file
 
 

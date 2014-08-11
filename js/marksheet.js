@@ -1,5 +1,5 @@
 var dataObtained={
-	data:[["name","English","Nepali","Social"],["Ram","80","72","60"]]
+	data:studentList.student_marks
 };
 table_name="ReportCard of "+dataObtained.data[1][0];
 var failFlag=0;		
@@ -23,9 +23,9 @@ markSheet[numberOfSubjects]=[" "," ",(100*(numberOfSubjects-1))," ",totalObtaine
 var dataToPrintFetch;
 var dataToPrint=new Array();
 var fullMarksAttained=0;
-setTimeout(function(){
+function markSheetDataReady(){
 	dataToPrintFetch=handsontable.getData();
 	dataToPrint=dataToPrintFetch.slice(1,(dataToPrintFetch.length-2));
 	fullMarksAttained=dataToPrintFetch[dataToPrintFetch.length-1][4];
-},10);
+}
 

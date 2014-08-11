@@ -4,7 +4,12 @@
 */
 
 //assumed data
+<<<<<<< HEAD
 $selected_table = "table2"; //this data is from the selected table by the user
+=======
+$name = "Sam"; //this data got from the selection by user
+$selected_table = "SLC"; //this data is from the selected table by the user
+>>>>>>> e4c9a8bedc21c4925a3198f8a8886d3df9f11094
 
 
 //actual codes

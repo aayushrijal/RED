@@ -1,8 +1,8 @@
 <?php
 include('lib/database.init.php');
 
-	if( $_POST['table_name'])
-	$table_name = $_POST['table_name']; //table_name is the name send by the user to load that file
+	if( $_POST["table_name"] )
+	$table_name = $_POST["table_name"]; //table_name is the name send by the user to load that file
 	else
 	echo "ERROR";
 
@@ -81,6 +81,10 @@ include('lib/database.init.php');
 	$json_output = json_encode($a);
 		
 	echo $json_output;
+	
+
+
+
 ?>
 
 	
