@@ -4,8 +4,8 @@
 */
 
 //assumed data
-$name = "sita"; //this data got from the selection by user
-$selected_table = "table2"; //this data is from the selected table by the user
+$name = "Sam"; //this data got from the selection by user
+$selected_table = "SLC"; //this data is from the selected table by the user
 
 
 //actual codes

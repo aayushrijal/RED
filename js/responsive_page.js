@@ -18,14 +18,34 @@ $("#newGraph").click(function(){
 	},100);
 });
 $("#newMarkSheet").click(function(){
-	$("#internalFirst").load("internalFirst.html");	
+	$.ajax({
+                url: "list_tables.php",
+		dataType: 'json',
+                type: 'GET',
+                success: function (daTable) {
+			$("#historyContent").children().remove();
+			for(i=0;i<daTable.table_list.length;i++){
+				$("#historyContent").append('<button class="sheetlist" id="'+daTable.table_list[i]+'"><img src="icons/sheets.png" width="100" height="100"><label>'+daTable.table_list[i]+'</label></button>');
+							}
+			sheetType="studentlist";
+			$(".sheetlist").click(function(e){	
+							sheetClick(e);
+							});	
+
+			}
+	});
+});
+$(".sheetlist").click(function(e){	
+		sheetClick(e);
+	});
+	/*$("#internalFirst").load("internalFirst.html");	
 	$.getScript("js/marksheet.js");
 	$("#firstPage").hide();
 	for(i=0;i<1000;i++);
 	setTimeout(function(){
 		handsontable.loadData(markSheet);
-	},30);
-	});
+	},30);*/
+	//});
 $("#button1").click(function(){
 	table_name=$("#text1").val();
 	$("#internalFirst").load("internalFirst.html");
