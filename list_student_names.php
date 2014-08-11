@@ -1,10 +1,9 @@
 <?php
 /* Lists the names of the students for generation of their marksheets
-
+	The input is the table name from which this file lists the students names.
 */
 
 //assumed data
-$name = "sita"; //this data got from the selection by user
 $selected_table = "table2"; //this data is from the selected table by the user
 
 
@@ -25,4 +24,3 @@ $selected_table = "table2"; //this data is from the selected table by the user
         $name_list = array("name_list"=>$name_list);
         $json_output = json_encode($name_list);
         echo $json_output;
-
