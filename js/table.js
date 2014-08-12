@@ -16,8 +16,8 @@
                   rowHeaders: false,
                   colHeaders: false,
                   minSpareRows: 1,
-		  manualColumnResize:true,
-		  manualColumnMove:true,	
+		 		  manualColumnResize:true,
+				  manualColumnMove:true,	
                   contextMenu: true,
 		  //data:[["Name","Subject 1","Subject 2","Subject 3","Subject 4","Subject 5"],[],[],[],[],[" "]],
 		cells: function (row, col, prop) {
@@ -97,4 +97,3 @@
                     $console.text('Changes will not be autosaved');
                   }
                 });
-

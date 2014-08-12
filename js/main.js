@@ -9,6 +9,7 @@ $(".crossicon").click(function(){
 		$("#wholeBody").removeClass("section1");
 		});
 $('#container').hide();
+$('#internalField').hide();
 $(function(){
 $.ajax({
         url: "list_tables.php",
@@ -26,8 +27,11 @@ $.ajax({
 });
 var dataObtained;
 function sheetClick(e){
-	alert("Im here");
+	eXit=e;
 	table_name=e.target.id;
+	if(table_name==""){
+	table_name=e.target.parentElement.id;
+	}
 	switch(sheetType){
 	case 'marksheet':				
 	$.ajax({	url:"marksheet_for_javascript.php",
@@ -66,8 +70,7 @@ function sheetClick(e){
                 			  });
 	break;
 	case 'history':
-	$("#internalFirst").load("internalFirst.html");
-	setTimeout(function(){
+	$("#internalField").show();
 	$("#firstPage").hide();
 	$.ajax({	url: "display_table.php",
 			data:{'table_name':table_name},	
@@ -79,7 +82,6 @@ function sheetClick(e){
 						plotted(res.responseJSON);
 						}
                 	});
-	},10);
 	break;	
 	default:
 	alert("Crap");

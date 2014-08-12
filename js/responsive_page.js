@@ -20,7 +20,7 @@ $("#newGraph").click(function(){
 $("#newMarkSheet").click(function(){
 	$.ajax({
                 url: "list_tables.php",
-		dataType: 'json',
+				dataType: 'json',
                 type: 'GET',
                 success: function (daTable) {
 			$("#historyContent").children().remove();
@@ -35,7 +35,8 @@ $("#newMarkSheet").click(function(){
 			}
 	});
 });
-$(".sheetlist").click(function(e){	
+$(".sheetlist").click(function(e){
+		alert(e,e.target.id);	
 		sheetClick(e);
 	});
 	/*$("#internalFirst").load("internalFirst.html");	
@@ -48,10 +49,10 @@ $(".sheetlist").click(function(e){
 	//});
 $("#button1").click(function(){
 	table_name=$("#text1").val();
-	$("#internalFirst").load("internalFirst.html");
-	setTimeout(function(){	
+	$("#internalFirst").children().remove();
+	$("#internalField").show();		
+	$("#tableName").html(table_name);
 	handsontable.loadData([["Name","Subject 1","Subject 2","Subject 3","Subject 4","Subject 5"],[],[],[],[],[" "]]);
-	},10);
 });
 $("#barButton").click(function(){
 		$("#tablename").remove();
