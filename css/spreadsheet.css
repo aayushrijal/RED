@@ -36,3 +36,14 @@
 	cursor: pointer;
 	margin: 30px 27px;
 	}
+.upfile{
+	border: 0 solid #ccc;
+	background-color: #e85657;
+	width: 244px;
+	padding: 10px 5px;
+	color: #fff;
+	font-family: Aaarghnormal;
+	cursor: hand;
+	cursor: pointer;
+	margin: 30px 27px;
+	}
