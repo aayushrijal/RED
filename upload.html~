@@ -3,6 +3,8 @@
 	<form enctype="multipart/form-data" action="file_uploader.php" method="POST">
 <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
 Choose a file to upload: <input name="uploadedfile" type="file" /><br />
+<input class="create" type="button" id="button1" value="Upload File">
+<button type="submit" value="Upload File"></button>
 </form>
 
 </body>

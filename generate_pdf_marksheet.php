@@ -17,8 +17,8 @@ $result_array = array( $array_1, $array_2, $array_3); //get the data from the js
 
 /* student's info and defaults in the marksheet
 */
-$name_of_student = "ANKIT SHRESTHA";		//assumend name
-$title = "ORGANIZAION NAME";
+$name_of_student = "STUDENT_NAME";		//assumend name
+$title = "ORGANIZATION NAME";
 $roll_no = "4525";
 $cursor = 0 ; // for the cursor of the pdf file  0 = right, 1 = next line, 2 = below
 $top_row = array("SN","Subject","FM","PM","Marks Obtained");

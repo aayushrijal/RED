@@ -3,8 +3,13 @@
  assumpsion make to send the [["name","English","Nepali","Social"],["Ram",80,72,60]] 	format to the javascript
  				the name in the first array is default
 */
-	$student_name = "paul";
-	$table_name = "table2";
+	if( $_POST["student_name"]){
+		$student_name = $_POST["student_name"];
+		$table_name = "table3";
+	}else{
+		echo "no data";
+	}
+	
 
 /* array output to the javascript file
 

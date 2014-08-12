@@ -1,0 +1,23 @@
+{
+"array1":
+	{
+	 "tablename":"uploaded_table",
+	 "subject0":"English",
+	 "subject1":"Maths",
+	 "subject2":"Science"
+	},
+"data0":
+	{
+	"0":"kurt",
+	"1":78,
+	"2":58,
+	"3":66
+	},
+"data1":
+	 {
+        "0":"axl",
+        "1":45,
+        "2":56,
+        "3":34
+        }
+}
