@@ -3,13 +3,17 @@
 	The input is the table name from which this file lists the students names.
 */
 
-//assumed data
-<<<<<<< HEAD
+/*assumed data
 $selected_table = "table2"; //this data is from the selected table by the user
-=======
 $name = "Sam"; //this data got from the selection by user
 $selected_table = "SLC"; //this data is from the selected table by the user
->>>>>>> e4c9a8bedc21c4925a3198f8a8886d3df9f11094
+*/
+		
+	if( $_POST["selected_table"]){
+		$selected_table = $_POST["selected_table"];
+	}else{
+		echo "no data";
+	}
 
 
 //actual codes
