@@ -23,9 +23,13 @@ markSheet[numberOfSubjects]=[" "," ",(100*(numberOfSubjects-1))," ",totalObtaine
 var dataToPrintFetch;
 var dataToPrint=new Array();
 var fullMarksAttained=0;
-function markSheetDataReady(){
+var fullMarks=0;
+//function markSheetDataReady(){
+	setTimeout(function(){
 	dataToPrintFetch=handsontable.getData();
 	dataToPrint=dataToPrintFetch.slice(1,(dataToPrintFetch.length-2));
-	fullMarksAttained=dataToPrintFetch[dataToPrintFetch.length-1][4];
-}
+	fullMarksAttained=dataToPrintFetch[dataToPrintFetch.length-2][4];
+	fullMarks=dataToPrintFetch[dataToPrintFetch.length-2][2];
+	},100);
+//}
 

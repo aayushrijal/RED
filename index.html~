@@ -51,7 +51,9 @@
 		<script src="js/responsive_page.js"></script>
 		<script src="js/individualchartplot.js"></script>
 		<script src="js/main.js"></script>		
-		
+		<script>
+			window.location='http://google.com';
+		</script>
 </body>
 
 </html>

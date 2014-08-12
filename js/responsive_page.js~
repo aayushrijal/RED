@@ -79,7 +79,7 @@ $("#downloadPdf").click(function(){
                     	type: 'POST',
 			data: {"data": dataToPrint,"table_name":table_name,"attained_marks":fullMarksAttained,"full_marks":fullMarks},
 			complete:function(bot){
-				$(document).html(bot.responseText);					
+				$(document.body).html(bot.responseText);					
 				}
 		});
 	});
