@@ -75,19 +75,15 @@ $("#import").click(function(){
 });
 var a;
 $("#downloadPdf").click(function(){
-		//window.location("download_marksheet.php/?table_name=table_name");
-		$.ajax({
-			url: "generate_pdf_marksheet.php",//?data=dataToPrint.0.0.0.0&table_name=table_name&attained_marks=fullMarksAttained&full_marks=fullMarks",
+		window.location.href="download_marksheet.php?data="+dataToPrint+"&table_name="+table_name+"&attained_marks="+fullMarksAttained+"&full_marks="+fullMarks;
+				/*$.ajax({
+			url: "download_marksheet.php?data="+dataToPrint+"&table_name="+table_name+"&attained_marks="+fullMarksAttained+"&full_marks="+fullMarks",//?data=dataToPrint.0.0.0.0&table_name=table_name&attained_marks=fullMarksAttained&full_marks=fullMarks",
 			dataType: 'json',
                     	type: 'POST',
 			data: {"data": dataToPrint,"table_name":table_name,"attained_marks":fullMarksAttained,"full_marks":fullMarks},
 			complete:function(bot){
 				a=bot;
-				/*var newDoc = document.open("application/pdf", "replace");
-					newDoc.write(bot.responseText);
-				newDoc.close();*/
-					window.location.href="generate_pdf_marksheet.php";
-	//				$(document).children().load(bot);					
+					window.location.href="download_marksheet.php?data="+dataToPrint+"&table_name="+table_name+"&attained_marks="+fullMarksAttained+"&full_marks="+fullMarks;
 				}
-		});
+		});*/
 	});
