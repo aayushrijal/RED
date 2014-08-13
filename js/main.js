@@ -1,6 +1,7 @@
 var table_name="TABLE1";
 var bat;
 var eXit=0;
+var student_table="TABLE1";
 var sheetType="history";
 $(".headerIcon").click(function(){
 		$("#wholeBody").toggleClass("section1");
@@ -35,7 +36,9 @@ function sheetClick(e){
 	switch(sheetType){
 	case 'marksheet':				
 	$.ajax({	url:"marksheet_for_javascript.php",
-			data:{'student_name':table_name},	
+			data:{'student_name':table_name,
+					'table_name':student_table	
+					},	
                 	dataType: 'json',
          		type: 'POST',
 			complete: function (studentList) {
@@ -58,6 +61,7 @@ function sheetClick(e){
                  		dataType: 'json',
                     		type: 'POST',
 				complete: function (studentList) {
+						student_table=table_name;
 						sheetType="marksheet";
 						$("#historyContent").children().remove();
 						for(i=0;i<studentList.responseJSON.name_list.length;i++){

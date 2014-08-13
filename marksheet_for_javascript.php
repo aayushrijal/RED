@@ -5,7 +5,7 @@
 */
 	if( $_POST["student_name"]){
 		$student_name = $_POST["student_name"];
-		$table_name = "table3";
+		$table_name = $_POST["table_name"];
 	}else{
 		echo "no data";
 	}

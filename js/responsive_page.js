@@ -73,14 +73,21 @@ $("#import").click(function(){
 	$("#firstPage").hide();
 	$("#internalFirst").load("import.html");	
 });
+var a;
 $("#downloadPdf").click(function(){
+		//window.location("download_marksheet.php/?table_name=table_name");
 		$.ajax({
-			url: "download_marksheet.php",
+			url: "generate_pdf_marksheet.php",//?data=dataToPrint.0.0.0.0&table_name=table_name&attained_marks=fullMarksAttained&full_marks=fullMarks",
 			dataType: 'json',
                     	type: 'POST',
 			data: {"data": dataToPrint,"table_name":table_name,"attained_marks":fullMarksAttained,"full_marks":fullMarks},
 			complete:function(bot){
-				$(document).html(bot.responseText);					
+				a=bot;
+				/*var newDoc = document.open("application/pdf", "replace");
+					newDoc.write(bot.responseText);
+				newDoc.close();*/
+					window.location.href="generate_pdf_marksheet.php";
+	//				$(document).children().load(bot);					
 				}
 		});
 	});
