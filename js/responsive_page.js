@@ -1,5 +1,31 @@
 var tableData=new Array();
-//var $egg;
+$("#loginButton").click(function(){
+	if($("#password").val()=="red"){
+		$("#beforelogin").hide();
+		$("#afterlogin").show();
+	}else{
+		$("#password").val('');
+		$("#password").attr({placeholder:"invalid password"});	
+	}
+
+});
+var downPDF=function(){
+	//if(this.html()=="downloadPDF"){
+	dataToPrintFetch=handsontable.getData();
+	dataToPrint=dataToPrintFetch.slice(1,(dataToPrintFetch.length-2));
+	for(i=0;i<dataToPrint.length;i++){
+		for(j=0;j<dataToPrint[0].length;j++){
+			if(i==0&&j==0){
+				dataToPrintArray="&data["+i+"]["+j+"]="+dataToPrint[i][j];		
+			}else{
+				dataToPrintArray+="&data["+i+"]["+j+"]="+dataToPrint[i][j];
+			}		
+		}};
+	fullMarksAttained=dataToPrintFetch[dataToPrintFetch.length-2][4];
+	fullMarks=dataToPrintFetch[dataToPrintFetch.length-2][2];
+	window.location.href="download_marksheet.php?student_name="+table_name.slice(14)+dataToPrintArray+"&attained_marks="+fullMarksAttained+"&full_marks="+fullMarks;
+	};
+
 $(".newSheet").click(function(){
 		$("#wholeBody").toggleClass("section1");
 		});
@@ -23,6 +49,7 @@ $("#newMarkSheet").click(function(){
 				dataType: 'json',
                 type: 'GET',
                 success: function (daTable) {
+			$(".history").html("SELECT TABLE");
 			$("#historyContent").children().remove();
 			for(i=0;i<daTable.table_list.length;i++){
 				$("#historyContent").append('<button class="sheetlist" id="'+daTable.table_list[i]+'"><img src="icons/sheets.png" width="100" height="100"><label>'+daTable.table_list[i]+'</label></button>');
@@ -68,5 +95,6 @@ $("#import").click(function(){
 	$("#internalFirst").load("import.html");	
 });
 $("#downloadPdf").click(function(){
+		alert("There is a download PDF button above the table dumbass!!");
 		window.location.href="download_marksheet.php?student_name="+table_name.slice(14)+dataToPrintArray+"&attained_marks="+fullMarksAttained+"&full_marks="+fullMarks;
 });

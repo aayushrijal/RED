@@ -51,8 +51,12 @@ function sheetClick(e){
 						$("#firstPage").hide();
 						setTimeout(function(){
 						handsontable.loadData(markSheet);
-							},100);
-							}
+						$(".button").html("Download PDF").attr({id:"downloadPDF"});
+						$("#downloadPDF").click(function(){
+						downPDF()
+							});						
+						},100);
+						}
                 			  });
         break;
 	case 'studentlist':
@@ -61,6 +65,7 @@ function sheetClick(e){
                  		dataType: 'json',
                     		type: 'POST',
 				complete: function (studentList) {
+						$(".history").html("SELECT STUDENT");
 						student_table=table_name;
 						sheetType="marksheet";
 						$("#historyContent").children().remove();

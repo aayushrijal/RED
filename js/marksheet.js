@@ -25,8 +25,7 @@ var dataToPrint=new Array();
 var fullMarksAttained=0;
 var fullMarks=0;
 var dataToPrintArray;
-//function markSheetDataReady(){
-	setTimeout(function(){
+	/*setTimeout(function(){
 	dataToPrintFetch=handsontable.getData();
 	dataToPrint=dataToPrintFetch.slice(1,(dataToPrintFetch.length-2));
 	for(i=0;i<dataToPrint.length;i++){
@@ -40,5 +39,5 @@ var dataToPrintArray;
 	fullMarksAttained=dataToPrintFetch[dataToPrintFetch.length-2][4];
 	fullMarks=dataToPrintFetch[dataToPrintFetch.length-2][2];
 	},100);
-//}
 
+*/
