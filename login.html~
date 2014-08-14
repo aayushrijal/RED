@@ -1,7 +1,0 @@
-<html>
-<header>
-		<img class='headerIcon' src='icons/redlogo.png' />
-		<div id="titlename">Representation & Evaluation of Data</div>
-		<div id='signout' ><div class="signout1">Signout</div></div>
-</header>
-</html>
