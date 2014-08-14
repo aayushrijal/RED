@@ -1,5 +1,5 @@
 var tableData=new Array();
-var $egg;
+//var $egg;
 $(".newSheet").click(function(){
 		$("#wholeBody").toggleClass("section1");
 		});
@@ -11,11 +11,11 @@ $("#newSpreadSheet").click(function(){
 $("#newGraph").click(function(){
 	//tableData=handsontable.getData();
 	$("#container").hide();		
-	//$("#firstPage").hide();
-	$egg=$.get("graphselect.html");
-	setTimeout(function(){
-	$("#internalFirst").prepend($egg.responseText);
-	},100);
+	$("#firstPage").hide();
+	//$egg=$.get("graphselect.html");
+	//setTimeout(function(){
+	$("#internalFirst").load("graphselect.html");
+	//},100);
 });
 $("#newMarkSheet").click(function(){
 	$.ajax({
@@ -39,14 +39,6 @@ $(".sheetlist").click(function(e){
 		alert(e,e.target.id);	
 		sheetClick(e);
 	});
-	/*$("#internalFirst").load("internalFirst.html");	
-	$.getScript("js/marksheet.js");
-	$("#firstPage").hide();
-	for(i=0;i<1000;i++);
-	setTimeout(function(){
-		handsontable.loadData(markSheet);
-	},30);*/
-	//});
 $("#button1").click(function(){
 	table_name=$("#text1").val();
 	$("#internalFirst").children().remove();
@@ -55,13 +47,15 @@ $("#button1").click(function(){
 	handsontable.loadData([["Name","Subject 1","Subject 2","Subject 3","Subject 4","Subject 5"],[],[],[],[],[" "]]);
 });
 $("#barButton").click(function(){
-		$("#tablename").remove();
+		//$("#tablename").remove();
+		$("#internalFirst").children().remove();
 		var chartName="column";
 		$("#container").show();
 		plotArea(chartName);	
 	});
 $("#areaButton").click(function(){
-		$("#tablename").remove();
+		//$("#tablename").remove();
+		$("#internalFirst").children().remove();
 		var chartName="area";
 		$("#container").show();
 		plotArea(chartName);	
@@ -73,17 +67,6 @@ $("#import").click(function(){
 	$("#firstPage").hide();
 	$("#internalFirst").load("import.html");	
 });
-var a;
 $("#downloadPdf").click(function(){
-		window.location.href="download_marksheet.php?data="+dataToPrint+"&table_name="+table_name+"&attained_marks="+fullMarksAttained+"&full_marks="+fullMarks;
-				/*$.ajax({
-			url: "download_marksheet.php?data="+dataToPrint+"&table_name="+table_name+"&attained_marks="+fullMarksAttained+"&full_marks="+fullMarks",//?data=dataToPrint.0.0.0.0&table_name=table_name&attained_marks=fullMarksAttained&full_marks=fullMarks",
-			dataType: 'json',
-                    	type: 'POST',
-			data: {"data": dataToPrint,"table_name":table_name,"attained_marks":fullMarksAttained,"full_marks":fullMarks},
-			complete:function(bot){
-				a=bot;
-					window.location.href="download_marksheet.php?data="+dataToPrint+"&table_name="+table_name+"&attained_marks="+fullMarksAttained+"&full_marks="+fullMarks;
-				}
-		});*/
-	});
+		window.location.href="download_marksheet.php?student_name="+table_name.slice(14)+dataToPrintArray+"&attained_marks="+fullMarksAttained+"&full_marks="+fullMarks;
+});

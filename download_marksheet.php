@@ -1,18 +1,18 @@
 <?php
 
-include('/var/www/downloaded_libraries/font/courier.php'); // for my local computer
-include('/var/www/downloaded_libraries/fpdf.php');  //for my local computer
+include('downloaded_libraries/font/courier.php'); // for my local computer
+include('downloaded_libraries/fpdf.php');  //for my local computer
 
 
 
-	if($_POST["data"]){
-                $result_array = $_POST["data"];
+	if($_GET["data"]){
+                $result_array = $_GET["data"];
         //  var_dump($result_array);
-		$tb = $_POST["table_name"];
+		$tb = $_GET["table_name"];
 	//	echo "$tb";
-		$fm = $_POST["full_marks"];
+		$fm = $_GET["full_marks"];
 	//	echo $fm;
-		$obtained_mark = $_POST["attained_marks"];
+		$obtained_mark = $_GET["attained_marks"];
 	//	echo $obtained_mark;
 	}else{
                 echo "error";
