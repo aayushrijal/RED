@@ -74,8 +74,9 @@
 	padding: 10px 0;
 	}
 .intro2{
-	font-size: 25px;
+	font-size: 20px;
 	padding: 10px 0;
+	line-height: 35px;
 	}
 #afterlogin{
 	display: none;
@@ -140,7 +141,7 @@ header{
 	/*box-shadow: 1px 2px 3px #ccc;*/
 	}
 .headerIcon1{
-	height: 63px;
+	height: 60px;
 	width: auto;
 	float: left;
 	margin-top: 1px;
@@ -194,19 +195,11 @@ section{
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
 }
-#sideBorder{
-	border-right: 1px solid #ccc;
-  	height: auto;
-  	padding: 20px 0 20px 50px;
-  	margin-right: 5%;
-  	float: right;
-  	margin-top: -100px;
-	}
 .newSheet{
   	background-color: #e85657;
 	border: 0px solid #e85657;
   	float: left;
-  	width: 90px;
+  	width: 160px;
   	text-align: center;
   	color: #f0faf1;
   	font-family: arial;
@@ -218,11 +211,15 @@ section{
 	width: 1300px;
 	margin: 0 auto;
 	}
+#left_Portion{
+	display: inline-block;
+	margin-left: 20px;
+	}
 #firstPage{
 	border: 0px solid #fff;
 	background-color: #fff;
-	margin: 0 auto;
-	width: 58%;
+	margin: -279px 0 0 260px ;
+	width: 75%;
 	min-height: 300px;
 	box-shadow: 1px 1px 3px 1px #ccc;
 	border-radius: 3px;
@@ -254,8 +251,9 @@ section{
 	padding:20px;
 	}
 #internalField{
+	width: 1000px;
 	border: 2px solid #1ecd97;
-	margin-top: 30px;
+	margin: 20px auto;
 }
 #click{
 	background-color: #1ecd97;
@@ -308,4 +306,24 @@ section{
 	cursor: hand;
 	cursor: pointer;
 	margin: 30px 15px;
+	}
+#references{
+	display: inline-block;
+	margin-top: 10px;
+	margin-right: 35px;
+	font-family: Aaarghnormal;
+	color: #ccc;
+	text-align: center;
+	width: 179px;
+	}
+.references1{
+	border-bottom: 1px solid #ccc;
+	font-size: 15px;
+	padding: 10px 0;
+	cursor: pointer;
+	cursor: hand;
+	}
+.references1:hover{
+	color: #456;
+	transition: all 0.3s;
 	}
