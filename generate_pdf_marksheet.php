@@ -5,8 +5,8 @@
 
 //include('downloaded_libraries/font/courier.php');   // for hosting in server
 //include('downloaded_libraries/fpdf.php');           // for hosting in server
-include('/var/www/RED/downloaded_libraries/font/courier.php'); // for my local computer
-include('/var/www/RED/downloaded_libraries/fpdf.php');  //for my local computer
+include('downloaded_libraries/font/courier.php'); // for my local computer
+include('downloaded_libraries/fpdf.php');  //for my local computer
 
 $array_1 = array(1,"English",100,32,80);
 $array_2 = array(2,"Nepali",100,32,72);

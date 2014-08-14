@@ -19,6 +19,67 @@
     font-weight: normal;
     font-style: normal;
 }
+#beforelogin{
+/*	display: none;*/
+	}
+#loginform{
+	transform: translateX(325%);	
+	position: absolute;
+	margin: 20px;
+	}
+.p_word{
+	border: 2px solid #ccc;
+	border-radius: 2px;
+	padding: 5px;
+	width: 200px;
+	background: transparent;
+	font-size: 18px;
+	color: #fff;
+	text-align: center;
+	}
+.login_button{
+	margin-left: 20px;
+	font-family: Aaarghnormal;
+	color: #fff;
+	font-size: 18px;
+	border: 0 solid #ccc;
+	background: transparent;
+	cursor: pointer;
+	cursor: hand;
+	}
+.login_page{
+	width: 1350px;
+	margin: 0 auto;
+	}
+#outIntro{
+	color: #fff;
+	font-family: Aaarghnormal;
+	position: absolute;
+	margin: -560px 0 0 200px;
+
+	}
+.inIntro1{
+	display: inline-block;
+	border-right: 1px solid #fff;
+	padding: 0 30px;
+	}
+.inIntro2{
+	display: inline-block;
+	verticle-align: middle;
+	padding: 0 30px;
+	}
+	
+.intro1{
+	font-size: 38px;
+	padding: 10px 0;
+	}
+.intro2{
+	font-size: 25px;
+	padding: 10px 0;
+	}
+#afterlogin{
+	display: none;
+	}
 body{
 	background-color: #880909;
 	margin: auto 0;
@@ -76,10 +137,19 @@ body{
 header{
 	height: 65px;
 	background: #344;
-	box-shadow: 1px 2px 3px #ccc;
+	/*box-shadow: 1px 2px 3px #ccc;*/
 	}
-.headerIcon{
-	height: 120px;
+.headerIcon1{
+	height: 63px;
+	width: auto;
+	float: left;
+	margin-top: 1px;
+	cursor: pointer;
+	cursor: hand;
+	position: absolute;
+}
+.headerIcon2{
+	height: 63px;
 	width: auto;
 	display: inline-block;
 	float: left;
@@ -91,19 +161,21 @@ header{
 	font: small-caps 22px Aaarghnormal;
 	display: inline-block;
 	padding-top: 35px;
-	margin-top: -8px;
+	margin-top: -15px;
 	color: #aaa;
 	}
-#welcome{
+#signout{
 	color: #aaa;
 	font-family: Aaarghnormal;
 	text-align: right;
-	padding-right: 50px;
+	padding-right: 70px;
 	margin-top: -25px;
 
 	}
-.welcome1{
+.signout1{
 	display: inline-block;
+	cursor: pointer;
+	cursor: hand;
 	}
 section{
 	margin: 0px -8px 0 -8px;
