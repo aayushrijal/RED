@@ -73,6 +73,11 @@ body{
 	cursor: pointer;
 	transition: all 0.5s;
 }
+header{
+	height: 65px;
+	background: #344;
+	box-shadow: 1px 2px 3px #ccc;
+	}
 .headerIcon{
 	height: 120px;
 	width: auto;
@@ -84,10 +89,21 @@ body{
 }
 #titlename{
 	font: small-caps 22px Aaarghnormal;
-	display: block;
+	display: inline-block;
 	padding-top: 35px;
 	margin-top: -8px;
 	color: #aaa;
+	}
+#welcome{
+	color: #aaa;
+	font-family: Aaarghnormal;
+	text-align: right;
+	padding-right: 50px;
+	margin-top: -25px;
+
+	}
+.welcome1{
+	display: inline-block;
 	}
 section{
 	margin: 0px -8px 0 -8px;
@@ -107,7 +123,7 @@ section{
 	transition: all 0.5s;
 }
 #sideBorder{
-	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
   	height: auto;
   	padding: 20px 0 20px 50px;
   	margin-right: 5%;
@@ -117,7 +133,7 @@ section{
 .newSheet{
   	background-color: #e85657;
 	border: 0px solid #e85657;
-  	float: right;
+  	float: left;
   	width: 90px;
   	text-align: center;
   	color: #f0faf1;
@@ -126,10 +142,14 @@ section{
   	cursor: pointer;
   	cursor: hand;
 	}
+#maincontainer{
+	width: 1300px;
+	margin: 0 auto;
+	}
 #firstPage{
 	border: 0px solid #fff;
 	background-color: #fff;
-	margin: 20px auto;
+	margin: 0 auto;
 	width: 58%;
 	min-height: 300px;
 	box-shadow: 1px 1px 3px 1px #ccc;
