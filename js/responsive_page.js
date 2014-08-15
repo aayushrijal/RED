@@ -1,14 +1,4 @@
 var tableData=new Array();
-$("#loginButton").click(function(){
-	if($("#password").val()=="red"){
-		$("#beforelogin").hide();
-		$("#afterlogin").show();
-	}else{
-		$("#password").val('');
-		$("#password").attr({placeholder:"invalid password"});	
-	}
-
-});
 var downPDF=function(){
 	//if(this.html()=="downloadPDF"){
 	dataToPrintFetch=handsontable.getData();
@@ -25,7 +15,10 @@ var downPDF=function(){
 	fullMarks=dataToPrintFetch[dataToPrintFetch.length-2][2];
 	window.location.href="download_marksheet.php?student_name="+table_name.slice(14)+dataToPrintArray+"&attained_marks="+fullMarksAttained+"&full_marks="+fullMarks;
 	};
-
+$("#signout").click(function(){
+	localStorage.removeItem("userID");
+	window.location.href="index.html";			
+			});
 $(".newSheet").click(function(){
 		$("#wholeBody").toggleClass("section1");
 		});

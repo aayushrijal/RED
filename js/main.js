@@ -12,6 +12,9 @@ $(".crossicon").click(function(){
 $('#container').hide();
 $('#internalField').hide();
 $(function(){
+if(localStorage.getItem("userID")==undefined){
+	window.location.href="index.html";
+}
 $.ajax({
         url: "list_tables.php",
 	dataType: 'json',
@@ -24,7 +27,7 @@ $.ajax({
 				sheetClick(e);
 			});
 	}
-       });	
+       });
 });
 var dataObtained;
 function sheetClick(e){
