@@ -3,10 +3,10 @@
  assumpsion make to send the [["name","English","Nepali","Social"],["Ram",80,72,60]] 	format to the javascript
  				the name in the first array is default
 */
-	if( $_POST["student_name"]){
-		$student_name = $_POST["student_name"];
-		$table_name = $_POST["table_name"];
-		$uid = $_POST["uid"];
+	if( $_GET["student_name"]){
+		$student_name = $_GET["student_name"];
+		$table_name = $_GET["table_name"];
+		$uid = $_GET["uid"];
 	}else{
 		echo "no data";
 	}
