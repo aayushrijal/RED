@@ -1,3 +1,4 @@
+
 var tableData=new Array();
 var downPDF=function(){
 	//if(this.html()=="downloadPDF"){
@@ -89,5 +90,5 @@ $("#import").click(function(){
 });
 $("#downloadPdf").click(function(){
 		alert("There is a download PDF button above the table dumbass!!");
-		window.location.href="download_marksheet.php?student_name="+table_name.slice(14)+dataToPrintArray+"&attained_marks="+fullMarksAttained+"&full_marks="+fullMarks;
+		window.location.href="download_marksheet.php?student_name="+table_name.slice(14)+dataToPrintArray+"&id="+diresu+"attained_marks="+fullMarksAttained+"&full_marks="+fullMarks;
 });

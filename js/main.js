@@ -3,6 +3,7 @@ var bat;
 var eXit=0;
 var student_table="TABLE1";
 var sheetType="history";
+var diresu;
 $(".headerIcon").click(function(){
 		$("#wholeBody").toggleClass("section1");
 		});
@@ -14,6 +15,8 @@ $('#internalField').hide();
 $(function(){
 if(localStorage.getItem("userID")==undefined){
 	window.location.href="index.html";
+}else{
+ diresu=localStorage.getItem("userID");	
 }
 $.ajax({
         url: "list_tables.php",
@@ -40,7 +43,8 @@ function sheetClick(e){
 	case 'marksheet':				
 	$.ajax({	url:"marksheet_for_javascript.php",
 			data:{'student_name':table_name,
-					'table_name':student_table	
+				'table_name':student_table,
+				'uid':diresu	
 					},	
                 	dataType: 'json',
          		type: 'POST',
@@ -48,23 +52,21 @@ function sheetClick(e){
 						dataObtained={
 										data:studentList.responseJSON.student_marks	
 						};
+						markSheetDataFn();
 						eXit=studentList;
-						$.getScript("js/marksheet.js");
-						$("#internalFirst").load("internalFirst.html");	
 						$("#firstPage").hide();
-						setTimeout(function(){
+						$("#internalField").show();
 						handsontable.loadData(markSheet);
 						$(".button").html("Download PDF").attr({id:"downloadPDF"});
 						$("#downloadPDF").click(function(){
 						downPDF()
 							});						
-						},100);
 						}
                 			  });
         break;
 	case 'studentlist':
 	$.ajax({	url: "list_student_names.php",
-				data:{'selected_table':table_name},	
+				data:{'selected_table':table_name,'uid':diresu},	
                  		dataType: 'json',
                     		type: 'POST',
 				complete: function (studentList) {
@@ -85,7 +87,7 @@ function sheetClick(e){
 	$("#internalField").show();
 	$("#firstPage").hide();
 	$.ajax({	url: "display_table.php",
-			data:{'table_name':table_name},	
+			data:{'table_name':table_name,'uid':diresu},	
                  	dataType: 'json',
                     	type: 'POST',
 			complete: function (res) {
