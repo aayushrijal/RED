@@ -1,11 +1,18 @@
 <?php
 	include("lib/database.init.php");
+	
+	if( $_GET["uid"]{
+		$uid = $_GET["uid"];
+	}else{
+		echo "ERROR";
+	}
+
 	$list_of_table = array();
 	$conn = mysql_connect($DB_host,$DB_user,$DB_password);
 	if( !$conn )
 		die("ERROR :".mysql_error());
 	mysql_select_db($DB_name);
-	$sql = "SELECT DISTINCT table_name FROM project1;"; //better if used the variables instead of the default values
+	$sql = "SELECT DISTINCT table_name FROM project1 where uid = '{$uid}';"; //better if used the variables instead of the default values
 	$retval = mysql_query($sql,$conn);
 		if(!$retval)
 			die("ERROR :".mysql_error());
