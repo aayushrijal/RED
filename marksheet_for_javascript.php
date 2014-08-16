@@ -6,6 +6,7 @@
 	if( $_POST["student_name"]){
 		$student_name = $_POST["student_name"];
 		$table_name = $_POST["table_name"];
+		$uid = $_POST["uid"];
 	}else{
 		echo "no data";
 	}
@@ -33,7 +34,7 @@
         if( !$db_select)
                 die('Cannot select database'.mysql_error() );
 		
-	$sql = "SELECT DISTINCT subject FROM project1 WHERE table_name = '$table_name';";
+	$sql = "SELECT DISTINCT subject FROM project1 WHERE table_name = '$table_name' and uid = '$uid';";
 	$retval = mysql_query($sql,$db_handle);
 		if(!$retval)
 		die("ERROR: ".mysql_error());
@@ -41,7 +42,7 @@
 		array_push($subject_list,$row['subject']);
 	}	
 		
-	$sql = "SELECT DISTINCT marks FROM project1 WHERE table_name = '$table_name' and name = '$student_name';";
+	$sql = "SELECT DISTINCT marks FROM project1 WHERE table_name = '$table_name' and name = '$student_name' and uid = '$uid';";
 	$retval = mysql_query($sql,$db_handle);
 		if(!$retval)
 		die("ERROR: ".mysql_error());
