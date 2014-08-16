@@ -39,7 +39,7 @@ $("#newGraph").click(function(){
 });
 $("#newMarkSheet").click(function(){
 	$.ajax({
-                url: "list_tables.php",
+                url: "list_tables.php/?uid="+diresu,
 				dataType: 'json',
                 type: 'GET',
                 success: function (daTable) {

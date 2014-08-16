@@ -33,6 +33,7 @@ $.ajax({
 			});
 	}
        });
+});
 function sheetClick(e){
 	eXit=e;
 	table_name=e.target.id;
@@ -101,4 +102,4 @@ function sheetClick(e){
 	alert("Crap");
 	}
 };
-});
+//});
