@@ -42,25 +42,27 @@ function sheetClick(e){
 	}
 	switch(sheetType){
 	case 'marksheet':				
-	$.ajax({	url:"marksheet_for_javascript.php",
-			data:{'student_name':table_name,
+	$.ajax({	url:"marksheet_for_javascript.php/?student_name="+table_name+"&table_name="+student_table+"&uid="+diresu,
+			/*data:{'student_name':table_name,
 				'table_name':student_table,
 				'uid':diresu	
 					},	
-                	dataType: 'json',
-         		type: 'POST',
-			complete: function (studentList) {
+                	dataType: 'json',*/
+         		type: 'GET',
+			success: function (studentList) {
+						studentList=$.parseJSON(studentList);
+						eXit=studentList;
 						dataObtained={
-										data:studentList.responseJSON.student_marks	
+										data:studentList.student_marks	
 						};
 						markSheetDataFn();
-						eXit=studentList;
+						
 						$("#firstPage").hide();
 						$("#internalField").show();
 						handsontable.loadData(markSheet);
 						$(".button").html("Download PDF").attr({id:"downloadPDF"});
 						$("#downloadPDF").click(function(){
-						downPDF()
+						downPDF();
 							});						
 						}
                 			  });

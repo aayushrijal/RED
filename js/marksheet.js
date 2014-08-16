@@ -1,10 +1,9 @@
-/*var dataObtained={
-	data:studentList.student_marks
-};*/
+
 var failFlag=0;		
 var markSheet=new Array();
 var markSheetDataFn=function(){
 table_name="ReportCard of "+dataObtained.data[1][0];
+$("#tableName").html(table_name);
 markSheet[0]=["S.N.","Subject","Full Marks","Pass Marks","Marks Attained"];
 var numberOfSubjects=dataObtained.data[0].length;
 	for(i=1;i<numberOfSubjects;i++){

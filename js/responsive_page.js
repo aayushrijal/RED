@@ -15,6 +15,7 @@ var downPDF=function(){
 	fullMarksAttained=dataToPrintFetch[dataToPrintFetch.length-2][4];
 	fullMarks=dataToPrintFetch[dataToPrintFetch.length-2][2];
 	window.location.href="download_marksheet.php?student_name="+table_name.slice(14)+dataToPrintArray+"&attained_marks="+fullMarksAttained+"&full_marks="+fullMarks;
+		
 	};
 $("#signout").click(function(){
 	localStorage.removeItem("userID");
