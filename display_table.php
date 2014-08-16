@@ -1,13 +1,11 @@
 <?php
 include('lib/database.init.php');
 
-	if( $_POST["table_name"] ){
+	if( $_POST["table_name"] )
 	$table_name = $_POST["table_name"]; //table_name is the name send by the user to load that file
-	$uid = $_POST["uid"];
-	}else{
+	else
 	echo "ERROR";
-	}
-
+	
 	$array = array();
 	$temp_array = array();
 	$array_index = 0; //initial index for the $array
@@ -21,7 +19,7 @@ include('lib/database.init.php');
 	if(!$conn)
 		die("ERROR: ".mysql_error());
 	mysql_select_db($DB_name);
-	$sql = "SELECT * FROM project1 where table_name = '{$table_name}' and uid = '{$uid}';";
+	$sql = "SELECT * FROM project1 where table_name = '{$table_name}';";
 	$retval = mysql_query($sql,$conn);
 		if(!$retval)
 			die("ERROR: ".mysql_error());
