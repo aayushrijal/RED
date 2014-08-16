@@ -1,7 +1,7 @@
 <?php
 	include("lib/database.init.php");
 	
-	if( $_GET["uid"]{
+	if( $_GET["uid"]){
 		$uid = $_GET["uid"];
 	}else{
 		echo "ERROR";

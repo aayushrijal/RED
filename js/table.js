@@ -53,7 +53,7 @@
 
                 $parent.find('button[name=load]').click(function () {
                   $.ajax({
-                    url: "display_table.php",//json/load.json",
+                    url: "display_table.php/?uid="+diresu,//json/load.json",
                     dataType: 'json',
                     type: 'GET',
                     success: function (res) {
@@ -71,7 +71,7 @@
                 $parent.find('button[name=save]').click(function () {
                   $.ajax({
                     url: "uploader.php",
-                    data: {"data": handsontable.getData(),"table_name":table_name}, //returns all cells' data
+                    data: {"data": handsontable.getData(),"table_name":table_name,"uid":diresu}, //returns all cells' data
                     dataType: 'json',
                     type: 'POST',
                     /*success: function (res) {
