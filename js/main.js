@@ -12,6 +12,8 @@ $(".crossicon").click(function(){
 		});
 $('#container').hide();
 $('#internalField').hide();
+var dataObtained;
+
 $(function(){
 if(localStorage.getItem("userID")==undefined){
 	window.location.href="index.html";
@@ -19,7 +21,7 @@ if(localStorage.getItem("userID")==undefined){
  diresu=localStorage.getItem("userID");	
 }
 $.ajax({
-        url: "list_tables.php",
+        url: "list_tables.php/?uid=1",
 	dataType: 'json',
         type: 'GET',
         success: function (daTable) {
@@ -31,8 +33,6 @@ $.ajax({
 			});
 	}
        });
-});
-var dataObtained;
 function sheetClick(e){
 	eXit=e;
 	table_name=e.target.id;
@@ -101,3 +101,4 @@ function sheetClick(e){
 	alert("Crap");
 	}
 };
+});
