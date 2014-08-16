@@ -3,6 +3,12 @@ if($_POST['table_name'])
 $table_name = $_POST['table_name'];
 else
 echo "ERROR";
+	
+if( $_POST["uid"]){
+	$uid = $_POST["uid"];
+}else{
+echo "ERROR";
+}
 
 if( $_POST['data']){
 	$x = $_POST['data'];
@@ -29,14 +35,14 @@ if( $_POST['data']){
 					echo "insert called";
 					if( $i != 0 ){
 						$sql = "INSERT INTO project1".
-							"(name,subject,marks,table_name) ".
-							"values('{$y[0]}','{$f}',{$y[$i]},'{$table_name}')";
+							"(name,subject,marks,table_name,uid) ".
+							"values('{$y[0]}','{$f}',{$y[$i]},'{$table_name}','{$uid}')";
 //if the value send in marks is NULL ie. the user has not send any data
 						if( empty($y[$i]) || ($y[$i]=="")){
 						$y[$i] = 0;
 						$sql = "INSERT INTO project1".
-							"(name,subject,marks,table_name) ".
-							"values('{$y[0]}','{$f}',{$y[$i]},'{$table_name}')";
+							"(name,subject,marks,table_name,uid) ".
+							"values('{$y[0]}','{$f}',{$y[$i]},'{$table_name}','{$uid}')";
 						}
 
 
