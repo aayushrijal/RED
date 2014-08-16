@@ -14,6 +14,12 @@ $selected_table = "SLC"; //this data is from the selected table by the user
 	}else{
 		echo "no data";
 	}
+		
+	if( $_POST["uid"]){
+		$uid = $_POST["uid"];
+	}else{
+		echo "ERROR";
+	}
 
 
 //actual codes
@@ -23,7 +29,7 @@ $selected_table = "SLC"; //this data is from the selected table by the user
         if( !$conn )
                 die("ERROR :".mysql_error());
         mysql_select_db($DB_name);
-        $sql = "SELECT DISTINCT name FROM project1 where table_name= '$selected_table';"; //better if used the variables instead of the default values
+        $sql = "SELECT DISTINCT name FROM project1 where table_name= '$selected_table' and uid = '$uid';"; //better if used the variables instead of the default values
         $retval = mysql_query($sql,$conn);
                 if(!$retval)
                         die("ERROR :".mysql_error());
