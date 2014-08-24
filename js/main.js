@@ -21,7 +21,7 @@ if(localStorage.getItem("userID")==undefined){
  diresu=localStorage.getItem("userID");	
 }
 $.ajax({
-        url: "list_tables.php/?uid=1",
+        url: "list_tables.php/?uid="+diresu,
 	dataType: 'json',
         type: 'GET',
         success: function (daTable) {
@@ -49,9 +49,13 @@ function sheetClick(e){
 					},	
                 	dataType: 'json',*/
          		type: 'GET',
-			success: function (studentList) {
-						studentList=$.parseJSON(studentList);
-						eXit=studentList;
+			/*async: false,*/
+       			//cache: false,
+       			//timeout: 30000,
+			complete: function (studentList) {
+						eXit=studentList;						
+						studentList=$.parseJSON(studentList.responseText);
+						
 						dataObtained={
 										data:studentList.student_marks	
 						};
@@ -95,6 +99,7 @@ function sheetClick(e){
                     	type: 'POST',
 			complete: function (res) {
 						bat=res;
+						$("#tableName").html(table_name);
 						handsontable.loadData(res.responseJSON.data);
 						plotted(res.responseJSON);
 						}
