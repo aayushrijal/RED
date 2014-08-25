@@ -22,9 +22,9 @@ include('downloaded_libraries/fpdf.php');  //for my local computer
 
 
 
-$name_of_student = "STUDENT_NAME";              //assumend name
-$title = "ORGANIZATION NAME";
-$roll_no = "4525";
+$name_of_student ="Kalimati  ,";              //assumend name
+$title = "Kathmandu Engineering College";
+$roll_no = "Kathmandu";
 $cursor = 0 ; // for the cursor of the pdf file  0 = right, 1 = next line, 2 = below
 $top_row = array("SN","Subject","FM","PM","Marks Obtained");
 

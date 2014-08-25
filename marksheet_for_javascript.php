@@ -48,7 +48,9 @@
 		die("ERROR: ".mysql_error());
 	while( $row = mysql_fetch_array($retval,MYSQL_ASSOC)){
 		array_push($marks_list,$row['marks']);
+		$temp=$row['marks'];	//remove this line
 	}
+	array_push($marks_list,$temp); //if error,remove this line
 	
 	array_push($output_array,$subject_list);
 	array_push($output_array,$marks_list);
