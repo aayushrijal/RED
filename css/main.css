@@ -239,8 +239,10 @@ section{
 #left_Portion{
 	display: inline-block;
 	margin-left: 20px;
+	float: left;
 	}
 #firstPage{
+	display: none;
 	border: 0px solid #fff;
 	background-color: #fff;
 	margin: -279px 0 0 260px ;
@@ -352,3 +354,22 @@ section{
 	color: #456;
 	transition: all 0.3s;
 	}
+#ourteam{
+	float: left;
+	display: inline;
+}
+.pic{
+	border-radius: 70px;
+	box-shadow: 2px 3px 3px #aaa;
+	vertical-align: middle;
+	margin-right: 40px;
+}
+.aboutme{
+	display: inline-block;
+	color: #344;
+
+}
+.myname{
+	font-family: Aaarghnormal;
+	font-weight: bold;
+}
