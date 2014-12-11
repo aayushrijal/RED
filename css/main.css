@@ -234,7 +234,10 @@ section{
 	}
 #maincontainer{
 	width: 1300px;
-	margin: 0 auto;
+	min-height: 700px;
+	margin: 10px auto;
+	padding: 20px 0;
+	/*overflow: auto;*/
 	}
 #left_Portion{
 	display: inline-block;
@@ -242,10 +245,10 @@ section{
 	float: left;
 	}
 #firstPage{
-	display: none;
+	/*display: none;*/
 	border: 0px solid #fff;
 	background-color: #fff;
-	margin: -279px 0 0 260px ;
+	margin: 0 0 0 260px ;
 	width: 75%;
 	min-height: 300px;
 	box-shadow: 1px 1px 3px 1px #ccc;
@@ -280,7 +283,7 @@ section{
 #internalField{
 	width: 1000px;
 	border: 2px solid #1ecd97;
-	margin: 20px auto;
+	margin: 0 auto 50px 240px;
 }
 #click{
 	background-color: #1ecd97;
@@ -355,6 +358,9 @@ section{
 	transition: all 0.3s;
 	}
 #ourteam{
+	display: none;
+}#team-member{
+	margin: 0 auto;
 	float: left;
 	display: inline;
 }
@@ -367,9 +373,14 @@ section{
 .aboutme{
 	display: inline-block;
 	color: #344;
-
+	padding: 20px 0;
 }
 .myname{
 	font-family: Aaarghnormal;
+	font-size: 20px;
 	font-weight: bold;
+}
+.personal-view{
+		font-family: sans-serif;
+		font-weight: bold;
 }
