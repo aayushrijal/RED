@@ -66,7 +66,7 @@ $("#button1").click(function(){
 	$("#internalFirst").children().remove();
 	$("#internalField").show();		
 	$("#tableName").html(table_name);
-	handsontable.loadData([["Name","Subject 1","Subject 2","Subject 3","Subject 4","Subject 5"],[],[],[],[],[" "]]);
+	handsontable.loadData([["Name","Subject 1","Subject 2","Subject 3","Subject 4","Subject 5"],[],[],[]]);
 });
 $("#barButton").click(function(){
 		//$("#tablename").remove();
