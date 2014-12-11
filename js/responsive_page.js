@@ -22,21 +22,27 @@ $("#signout").click(function(){
 	window.location.href="index.html";			
 			});
 $(".newSheet").click(function(){
-		$("#wholeBody").toggleClass("section1");
+		$("#wholeBody").addClass("section1");
 		});
 $("#newSpreadSheet").click(function(){
 	$("#container").hide(1000);		
 	$("#firstPage").hide();
+	$("#internalFirst").show();
 	$("#internalFirst").load("spreadsheet.html");	
 });
 $("#newGraph").click(function(){
+	tableData=handsontable.getData();
+	if(tableData[1]==null)
+	{
+	alert("Select a table first");
+	}else{
 	//tableData=handsontable.getData();
 	$("#container").hide();		
 	$("#firstPage").hide();
 	//$egg=$.get("graphselect.html");
 	//setTimeout(function(){
 	$("#internalFirst").load("graphselect.html");
-	//},100);
+	}
 });
 $("#newMarkSheet").click(function(){
 	$.ajax({
@@ -44,6 +50,11 @@ $("#newMarkSheet").click(function(){
 				dataType: 'json',
                 type: 'GET',
                 success: function (daTable) {
+			$("#internalFirst").hide();
+			$("#ourteam").hide();
+			$("#firstPage").show();
+			$("#container").hide();
+			$("#internalField").hide();
 			$(".history").html("SELECT TABLE");
 			$("#historyContent").children().remove();
 			for(i=0;i<daTable.table_list.length;i++){
@@ -89,7 +100,19 @@ $("#import").click(function(){
 	$("#firstPage").hide();
 	$("#internalFirst").load("import.html");	
 });
+$("#explore").click(function(){
+	$("#internalFirst").hide();
+	$("#ourteam").hide();
+	$("#firstPage").show();
+	$("#container").hide();
+	$("#internalField").hide();	
+	});
+$("#ourTeam").click(function(){
+	$("#container").hide();
+	$("#internalField").hide();
+	$("#firstPage").hide();
+	$("#ourteam").toggle();
+});
 $("#downloadPdf").click(function(){
-		alert("There is a download PDF button above the table dumbass!!");
 		window.location.href="download_marksheet.php?student_name="+table_name.slice(14)+dataToPrintArray+"&id="+diresu+"attained_marks="+fullMarksAttained+"&full_marks="+fullMarks;
 });
